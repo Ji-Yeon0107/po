@@ -1,0 +1,104 @@
+* p span { color:red; font-weight:bold; }
+.container {
+    position:relative; top:0px;
+    min-height: calc(100vh - 220px);
+    padding-bottom:100px;
+    width:100%; min-width:1510px;
+    background:rgb(255, 253, 248);
+    /* background:rgb(75, 58, 20); 
+    color:white;*/
+}
+
+/* 배경색 흰색 */
+.container-bg {
+    background:#fff;
+}
+
+.container .inner {
+    outline:0px solid red;
+    position:relative;
+    margin:0 auto;
+    width:1480px; height:100%;
+    display:flex;
+}
+
+/* snb 사이드 메뉴 공통*/
+.container .inner .snb { outline:0px solid green;
+    width:220px; height:300px;
+    margin-top:100px;
+    border-radius:10px;
+    background:#ebe2cf;
+    position:relative; left:-110px;
+}
+.container>.inner>h1 {
+    width:180px; height:40px;
+    position:relative; top:35px; left:80px;
+    font-size:1.6rem;
+}
+.container .inner .snb ul {
+    width:100%; height:100%;
+    position:relative;
+ }
+.container .inner .snb ul li {
+    position:relative;
+    width:100%; height:40px; line-height:40px; 
+    text-indent:38px;
+    cursor:pointer;
+    transition:height 0.8s;
+    overflow:hidden;
+ }
+ .container .inner .snb ul li:after {
+    content:''; display:block; 
+    position:absolute; top:38px; left:0;
+    margin-left:10px;
+    width:80%; height:0px;
+    border-bottom:1px solid rgba(99, 55, 26, 0.2);
+ }
+ 
+ .container .inner .snb ul li:first-child {
+     margin-top:20px;
+ }
+.container .inner .snb ul li:hover { color: coral; }
+.container .inner .snb ul li:hover .snb-list-dep2 { color: black;}
+
+.container .inner .snb ul li .snb-list-dep2 { 
+    outline:0px solid blue;
+    width: 100%; height: 40px;
+    line-height:40px;
+    text-indent:48px;
+    background-color:#fff;
+ }
+ .container .inner .snb ul li:hover .snb-list-dep2:hover { color:coral; }
+
+
+/* snb 사이드 메뉴 - 마켓오 */
+.container .inner .snb ul .snb-list-market:nth-child(2):hover { height:130px; }
+.container .inner .snb ul .snb-list-market:nth-child(3):hover { height:170px; }
+/* snb 사이드메뉴 - 닥터유 */
+.container .inner .snb ul .snb-list-dr:nth-child(2):hover { height:170px; }
+/* snb 사이드메뉴 - 회사소개 */
+.container .inner .snb ul .snb-list-orion:nth-child(1):hover { height:130px; }
+
+
+/* container 컨테이너 공통 */
+.container .inner .content { outline:0px solid blueviolet;
+    flex:90; height:100%;
+    position:relative;
+}
+.container> .inner> .content> h2, p {
+    padding-top:35px;
+    padding-left:20px;
+}
+.container> .inner> .content> h2 {
+    padding-bottom:8px;
+    border-bottom:1px solid rgba(99, 55, 26, 0.2);;
+}
+.container> .inner> .content> h3 {
+    padding-top:5px;
+    padding-left:20px;
+}
+.container .inner .content .depth {
+    position:absolute; right:0px;
+    font-size:0.85rem;
+}
+

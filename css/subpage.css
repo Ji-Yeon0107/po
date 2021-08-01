@@ -1,0 +1,681 @@
+* p span { color:red; font-weight:bold; }
+.container { 
+    position:relative; top:0px;
+    min-height: calc(100vh - 220px);
+    padding-bottom:100px;
+    width:100%; min-width:1510px;
+    background:rgb(255, 253, 248);
+}
+.container-bg { background:#fff; } /*흰색배경페이지*/
+
+.container .inner {
+    outline:0px solid red;
+    position:relative;
+    margin:0 auto;
+    width:1480px; height:100%;
+    display:flex; 
+}
+
+/* snb 사이드 메뉴 공통 */
+.container .inner .snb {
+    width:220px; height:300px;
+    margin-top:100px;
+    border-radius:10px;
+    background:#ebe2cf;
+    position:relative; left:-110px;
+}
+.container>.inner>h1 {
+    width:180px; height:40px;
+    position:relative; top:35px; left:80px;
+    font-size:1.6rem;
+}
+.container .inner .snb ul {
+    width:100%; height:100%;
+    position:relative;
+ }
+.container .inner .snb ul li {
+    position:relative;
+    width:100%; height:40px; line-height:40px; 
+    text-indent:38px;
+    cursor:pointer;
+    transition:height 0.8s;
+    overflow:hidden;
+ }
+ .container .inner .snb ul li:after {
+    content:''; display:block; 
+    position:absolute; top:38px; left:0;
+    margin-left:10px;
+    width:80%; height:0px;
+    border-bottom:1px solid rgba(99, 55, 26, 0.2);
+ }
+ 
+ .container .inner .snb ul li:first-child {
+     margin-top:20px;
+ }
+.container .inner .snb ul li:hover { color: coral; }
+.container .inner .snb ul li:hover .snb-list-dep2 { color: black;}
+
+.container .inner .snb ul li .snb-list-dep2 { 
+    outline:0px solid blue;
+    width: 100%; height: 40px;
+    line-height:40px;
+    text-indent:48px;
+    background-color:#fff;
+ }
+ .container .inner .snb ul li:hover .snb-list-dep2:hover { color:coral; }
+
+
+/* snb 사이드 메뉴 - 마켓오 */
+.container .inner .snb ul .snb-list-market:nth-child(2):hover { height:130px; }
+.container .inner .snb ul .snb-list-market:nth-child(3):hover { height:170px; }
+/* snb 사이드메뉴 - 닥터유 */
+.container .inner .snb ul .snb-list-dr:nth-child(2):hover { height:170px; }
+/* snb 사이드메뉴 - 회사소개 */
+.container .inner .snb ul .snb-list-orion:nth-child(1):hover { height:130px; }
+
+/* container 컨테이너 공통 */
+.container .inner .content { outline:0px solid blueviolet;
+    flex:90; height:100%;
+    position:relative;
+}
+.container> .inner> .content> h2, p {
+    padding-top:35px;
+    padding-left:20px;
+}
+.container> .inner> .content> h2 {
+    padding-bottom:8px;
+    border-bottom:1px solid rgba(99, 55, 26, 0.2);;
+}
+.container> .inner> .content> h3 {
+    padding-top:5px;
+    padding-left:20px;
+}
+.container .inner .content .depth {
+    position:absolute; right:10px;
+    font-size:0.85rem;
+}
+
+
+/*                    새로운 제품 - 신제품/리뉴얼                  */
+.container .inner .content .product { 
+    width:100%;
+    position:relative;
+    margin:80px auto;
+    display:grid;
+    grid:repeat(2, 1fr) /auto-flow;
+    row-gap:150px;
+    justify-content: space-around;
+}
+.container .inner .content .product .product-list {
+    width:240px; height:215px;
+    margin-left:2%; margin-right:2%;
+    cursor:pointer;
+}
+.container .inner .content .product .product-list img {
+    margin:0 auto;
+}
+.container .inner .content .product .product-list:after {
+    content:'자세히 보기'; display:block; 
+    text-align:center;
+    position:relative; top:-250px;
+    width:240px; height:215px;
+    background:rgba(0, 0, 0, 0.5); color:#fff;
+    font-weight:100; font-size:0.9rem;
+    opacity:0; transition:all 0.6s;
+}
+.container .inner .content .product .product-list:hover:after {
+    opacity:1;
+}
+.container>.inner>.content>.product>.product-list>img {
+    cursor:pointer;
+    width:100%; height:100%;
+}
+.container>.inner>.content>.product>.product-list>p {         
+    text-align:center;
+    width:100%; height:30px;
+    padding-top:0; padding-bottom:10px;
+}
+/* 모달창 안 */
+.container .inner .content .product-modal {
+    background: rgba(0,0,0,0.5);
+    position:absolute; top:0; left:-50px;
+    width:100%; height:100%;
+    cursor:pointer;
+    display:none;
+}
+.container .inner .content .product-modal .product-modal-cont{
+    background:white;
+    position:absolute; top:200px; left:100px;
+    width: 500px; height:600px;
+    display:none;
+}
+.container .inner .content .product-modal .product-modal-cont img {
+    width:330px; height:300px;
+}
+.container .inner .content .product-modal .product-modal-cont p {
+   
+}
+
+/*                         초코파이 하우스                      */
+/* 초코파이 하우스 - 제품소개 */
+.cont-choco { background:rgb(223, 207, 172);}
+.container .inner .content .cont-chocopie {
+    width:100%; height:100%;
+    margin-top:50px;
+}
+.container>.inner>.content>.cont-chocopie>p {
+    padding-top:18px;
+}
+.container .inner .content .cont-chocopie .chocopie {
+    position:relative;
+    width:100%;
+    outline:0px solid green;
+}
+.container .inner .content .cont-chocopie .chocopie-recipe {
+    height:100px;
+}
+.container .inner .content .cont-chocopie .chocopie-flavor {
+    border-top: 1px solid rgba(99, 55, 26, 0.5);
+    border-bottom: 1px solid rgba(99, 55, 26, 0.5);
+}
+.container .inner .content .cont-chocopie .chocopie-gift {
+    border-bottom: 1px solid rgba(99, 55, 26, 0.5);
+}
+/* 초코파이 하우스 - 텍스트 */
+.container .inner .content .cont-chocopie .txt-hover {
+    position: relative; top:145px;
+}
+.container .inner .content .cont-chocopie .chocopie p {
+    text-align:center;
+    padding:0;
+}
+.container .inner .content .cont-chocopie .chocopie .txt-small{ font:normal 1.5rem Noto Sans KR; }
+.container .inner .content .cont-chocopie .chocopie .txt-large{ 
+    font:normal 2.8rem Noto Sans KR;
+    border-bottom: 1px solid rgba(99, 55, 26, 0.5);
+}
+/* 초코파이 하우스 - 초코파이 그림 관련 */
+.container .inner .content .cont-chocopie .chocopie-detail {
+    outline:0px solid red;
+    width:100%; height:750px;
+    position:relative;
+    margin-top:-40px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .txt-center { text-align:center; }
+.container .inner .content .cont-chocopie .chocopie-detail p span { 
+    color:black; font-weight:normal; 
+}
+.container .inner .content .cont-chocopie .chocopie-detail img {
+    width:auto;
+    position:absolute; top:195px; left: 300px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail {
+    outline:0px solid blue;
+    width:100%; height:620px;
+    position:relative;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list {
+    position:absolute;
+}
+.container>.inner>.content>.cont-chocopie>.chocopie-detail>.chocopie-img-detail>.chocopie-detail-list>.img-pointer {
+    width:17px; height:17px;
+    border-radius:50%;
+    background:red; opacity:0.8;
+    cursor:pointer;
+}
+.container>.inner>.content>.cont-chocopie>.chocopie-detail>.chocopie-img-detail>.chocopie-detail-list>.img-pointer:after {
+    content:''; display:block; position:relative;
+    top:-7px; left:-7px;
+    width:27.2px; height:27.2px;
+    border-radius:50%;
+    border:2px dotted rgb(189, 1, 1); opacity:0.8;
+    transition:all 0.8s;
+}
+.container>.inner>.content>.cont-chocopie>.chocopie-detail>.chocopie-img-detail>.chocopie-detail-list>.img-pointer:hover:after { transform:scale(0.625); }
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer .pointer-line {
+    border-top: 3px dotted red;
+    position:absolute; 
+    opacity:0; transition: all 0.8s;
+}
+.container>.inner>.content>.cont-chocopie>.chocopie-detail>.chocopie-img-detail>.chocopie-detail-list .detail-all {
+    opacity:0;
+}
+/* 1번 */
+.container>.inner>.content>.cont-chocopie>.chocopie-detail>.chocopie-img-detail>.chocopie-detail-list>.img-pointer1 {
+    margin-top: 220px; margin-left:530px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer1 .pointer-line {
+    width: 80px; height:1px;
+    top:196px; left:445px;
+    transform:rotate(30deg);
+    opacity:1;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer1 .detail-chocolate {
+    padding:0; opacity:1;
+    position:absolute; top:80px; left:310px;
+    outline:0px solid black; 
+    width:200px; height: 100px; overflow:hidden; transition:height 0.8s;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer1 .detail-chocolate span:nth-child(3) {
+    font-size:0.9rem;
+}
+
+/* 2번 */
+.container>.inner>.content>.cont-chocopie>.chocopie-detail>.chocopie-img-detail>.chocopie-detail-list>.img-pointer2 {
+    margin-top: 360px; margin-left:480px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer2 .pointer-line {
+    width: 135px; height:1px;
+    top:445px; left:375px;
+    transform:rotate(-60deg);
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer2 .detail-filling {
+    padding:0;
+    position:absolute; top:530px; left:320px;
+    outline:0px solid black;
+    width:200px; height: 100px; overflow:hidden; transition:height 0.8s;
+}
+
+/* 3번 */
+.container>.inner>.content>.cont-chocopie>.chocopie-detail>.chocopie-img-detail>.chocopie-detail-list>.img-pointer3 {
+    margin-top: 390px; margin-left:390px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer3 .pointer-line {
+    width: 100px; height:1px;
+    top:417px; left:290px;
+    transform:rotate(-20deg);
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer3 .detail-biscuit {
+    padding:0;
+    position:absolute; top:430px; left:125px;
+    outline:0px solid black;
+    width:200px; height: 100px; overflow:hidden; transition:height 0.8s;
+}
+
+/* 4번 */
+.container>.inner>.content>.cont-chocopie>.chocopie-detail>.chocopie-img-detail>.chocopie-detail-list>.img-pointer4 {
+    margin-top: 335px; margin-left:350px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer4 .pointer-line {
+    width: 100px; height:1px;
+    top:303px; left:260px;
+    transform:rotate(40deg);
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer4 .detail-snow {
+    padding:0;
+    position:absolute; top:200px; left:80px;
+    outline:0px solid black;
+    width:220px; height: 100px; overflow:hidden; transition:height 0.8s;
+}
+
+/* 초코파이 하우스 - 소개 - special flavor */
+.container .inner .content .cont-chocopie .chocopie-flavor {
+    height:1050px;
+}
+.container .inner .content .cont-chocopie .chocopie-flavor ul {
+    outline:0px solid green;
+    width:680px; margin:80px auto;
+    cursor:pointer;
+}
+.container .inner .content .cont-chocopie .chocopie-flavor  ul:after {
+    content:''; display:block; clear:both; 
+}
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img { 
+    width:300px; margin-top:10px;
+    display:block; float:left;
+    position:relative;
+}
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img img {
+    display:block; border-radius:5px;
+    border:1px solid rgb(175, 159, 149);
+}
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:after {
+    content:''; display:block; clear:both;
+    border-radius:50%;
+    width:240px; height:200px;
+    transform:rotateY(90deg);
+    position:absolute; margin-top:-230px; margin-left:30px;
+    opacity:0; transition:all 0.8s;
+}
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img .img-txt {
+    width:300px; height:30px;
+}
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img .img-txt2 { /*가운데글자*/
+    width:300px; height:200px;
+    position:absolute; top: 0px; z-index:99;
+    margin:20px auto;
+    text-align:center;
+    padding-top:38px;
+    font-size:1.3rem; line-height:30px;
+    border-radius:50%;
+    opacity:0; transition:all 0.8s;color:white; 
+}
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img .img-txt2 p:nth-child(2) { 
+    font-size:0.9rem; }
+
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:nth-child(1):after { content:''; background:rgb(102, 45, 8); }
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:nth-child(2):after { background:rgb(255, 120, 43); }
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:nth-child(3):after { background:rgb(218, 185, 42); }
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:nth-child(4):after { background:rgb(172, 72, 6); }
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:nth-child(5):after { background:rgb(255, 93, 93); }
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:nth-child(6):after { background:rgb(104, 47, 10); }
+
+.container .inner .content .cont-chocopie .chocopie-flavor ul .flavor-img:nth-child(odd) { margin-right:80px; }
+
+/* special flavor 이미지 호버 */
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:hover:after { 
+    transform:rotateY(150deg);
+    opacity:0.8;
+ }
+ .container .inner .content .cont-chocopie .chocopie-flavor ul .flavor-img:hover .img-txt2 { opacity:1; }
+
+/* 초코파이 하우스 - 소개 - gift set */
+.container .inner .content .cont-chocopie .chocopie-gift div {
+    width:100%; height:750px;
+}
+.container .inner .content .cont-chocopie .chocopie-gift div img {
+    display:block; border-radius:50px;
+    margin:80px auto;
+    border:1px solid rgb(175, 159, 149);
+}
+.container .inner .content .cont-chocopie .chocopie-gift div ul {
+    width:100%; height:150px;
+    display:flex; justify-content:center;
+}
+.container .inner .content .cont-chocopie .chocopie-gift div ul:after { content:''; display:block; clear:both; }
+.container .inner .content .cont-chocopie .chocopie-gift div ul li { 
+    width:240px; padding:20px;
+    border-radius:20px;
+    background:rgb(255, 252, 237); 
+    border:1px solid rgb(175, 159, 149);
+    margin:0 30px;
+}
+.container .inner .content .cont-chocopie .chocopie-gift div ul li p { font-size:1.3rem; line-height:2;}
+.container .inner .content .cont-chocopie .chocopie-gift div ul li p:nth-child(2) { font-size:0.9rem; }
+
+/* 초코파이 하우스 - 스토어 */
+.container .inner .content .store-box {
+    width:100%; height:100%;
+    position:relative; top:0; left:0;
+}
+.container .inner .content .store-box .store-list {
+    width:600px;
+    margin:0px auto;
+    margin-top:40px;
+}    
+.container .inner .content .store-box .store-list img {
+    display:block;
+    width:600px;
+}
+.container .inner .content .store-box .store-list p {
+    padding:0;
+    margin-top:20px;
+}
+.container .inner .content .store-box .store-list p:first-child {
+    font-size: 1.5rem;
+    margin-bottom:20px;
+    padding-bottom:5px;
+    border-bottom:1px solid #ebe2cf;
+}
+/*                            마켓오                           */
+/* 마켓오 - 마켓오소개 */
+
+/* 마켓오 - 마켓오 네이쳐 */
+.container .inner .content .shelf {
+    position:relative;
+    width:100%;
+}
+/* 진열된 그래놀라,그래놀라 바 이미지, 텍스트 */
+.container .inner .content .shelf .shelf-box {
+    margin:50px auto;
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-auto-rows: 320px;
+} 
+.container .inner .content .shelf .shelf-box .modal-btn {
+    transition:all 0.6s;
+    margin: 0 auto;
+    position:relative; z-index:2;
+    cursor:pointer;
+}
+.container .inner .content .shelf .shelf-box .modal-btn:hover { /*호버*/
+    transform:scale(1.2) translatez(30px);
+}
+.container .inner .content .shelf .shelf-box-txt {
+    width:100%; height:600px;
+    padding-top:210px;
+    position:absolute; z-index:1;
+    text-align:center;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: 49px;
+    row-gap:275px;
+    cursor:pointer; 
+}
+.container .inner .content .shelf .shelf-box-txt li{
+    text-align:center;
+    width:100%;
+    position:relative;
+}
+
+
+
+/* 그래놀라, 그래놀라 바 이미지 팝업 */
+.gran-modal { 
+    display:none; 
+    position:absolute; left:0;top:0; z-index:2;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.7);
+    cursor:pointer;   
+}
+.gran-modal .gran-modal-cont {  
+    position:relative; margin:140px auto;
+    width:60%;
+    border-radius:20px;
+    background:#fff;
+}
+
+/* 마켓오,닥터유,제주용암수
+이미지 하나 있는 페이지 */
+.container .inner .content .brand-cont,
+.container .inner .content .jeju {
+    width:95%;
+    position:relative; 
+}
+.container .inner .content .brand-cont img,
+.container .inner .content .jeju img {
+    display:block;
+    position:relative; margin:00px auto;
+    margin-top:30px;
+    width:70%;
+}
+.container .inner .content .brand-cont .marketO-img__small {
+    width:100%;
+}
+.container .inner .content .brand-cont img:nth-child(2) {
+    margin-top:0;
+}
+
+
+/*                           고객센터                         */
+/* 고객센터 - 고객의견접수 */
+.container .inner .content .cont-customer {
+ padding:30px;
+}
+.container .inner .content .cont-customer div {
+    margin-top:3px;
+}
+.container .inner .content .cont-customer div:nth-child(1),
+.container .inner .content .cont-customer div:nth-child(2) {
+    margin-top:20px;
+}
+.container .inner .content .cont-customer div:nth-child(3) {
+    margin-top:50px;
+}
+/* input */
+.container .inner .content .cont-customer input {
+    border:1px solid #bbbbbb;
+    text-indent:10px;
+    height:45px;
+}
+.container .inner .content .cont-customer div input[name="writer"] {
+    width:200px;
+}
+.container .inner .content .cont-customer div input[name="email"] {
+    width:300px;
+}
+.container .inner .content .cont-customer div input[name="title"]{
+    width:700px;
+}
+
+.container .inner .content .cont-customer input[type="radio"]{
+    width:14px; height:16px;
+} 
+.container .inner .content .cont-customer label[for="question-select"] { width:100px;}
+.container .inner .content .cont-customer #question-select {
+    height:30px;
+}
+.container .inner .content .cont-customer textarea[name="content"] {
+    width:700px; height:400px;
+    border:1px solid #bbbbbb;
+    padding:10px; font: normal 1rem normal;
+    resize:none;
+}
+.container .inner .content .cont-customer button {
+    width:100px; height:40px;
+    margin:30px 300px;
+    border:none;
+    cursor:pointer;
+}
+.container .inner .content .cont-customer button:hover {
+    background:coral; color:white;
+}
+
+/*                           회사소개                              */
+/* 회사소개 - 회사연혁 */
+.container .inner .content .history {
+    width:100%; height:1000px;
+}
+.container .inner .content .history-title {
+    position:absolute; top:300px; left:75px;
+}
+/* 타임라인 연도 */
+.container .inner .content .history .history-year {
+    width: 100%; height:60px;
+    position:absolute; top:245px; left:0px;
+    padding-left:20px;
+}
+.container .inner .content .history .history-year li {
+    float:left; width:140px; height:100%;
+    text-indent:36px;
+}
+.container .inner .content .history .history-year li:first-child {
+    text-indent:42px;
+}
+/* 타임라인 */
+.container .inner .content .history .history-cont {
+    width:100%; height:100%;
+    border:0px solid green;
+    position:relative;
+}
+.container .inner .content .history .history-cont:after {
+    content:''; display:block; clear:both;
+}
+.container .inner .content .history .history-cont .timeline {
+    position:absolute; top:82px; left:70px;
+    width:840px; height:1px;
+    border-bottom:1px solid red;
+}   
+.container .inner .content .history .history-cont .timeline-point {
+    position:absolute; top:75px;
+    width:16px; height:16px;
+    background:red;
+    border-radius:50%;
+    float:left; cursor:pointer;
+    transition:all 0.8s; 
+    transform-origin:center;
+}
+.container .inner .content .history .history-cont .timeline-point:after {
+    /*  clear:both; */
+    content:''; display:block;
+    position:absolute; top:-9px;left:-9px;
+    width:32px; height:32px;
+    border-radius:50%; border:1px solid rgb(177, 3, 3);
+    transition:all 0.6s;
+} 
+/* 빨간동그라미 호버 */
+.container .inner .content .history .history-cont .timeline-point:hover:after {
+    transform:scale(0.4);
+    border:1px solid red;
+}
+/* 첫번째 빨간동그라미 속성, 호버 */
+.container .inner .content .history .history-cont .timeline-point:nth-child(2){ 
+    top:66px; width:30px; height:30px; 
+}
+.container .inner .content .history .history-cont .timeline-point:nth-child(2):after { 
+    top:-7px; left:-7px; width:42px; height:42px; 
+}
+.container>.inner>.content>.history .history-cont>.timeline-point:nth-child(2):hover:after { 
+    transform:scale(0.7); border:1px solid red;
+}
+/* 각 빨간동그라미 별 위치 */
+.container .inner .content .history .history-cont .timeline-point:nth-child(2) { left:70px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(3) { left:210px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(4) { left:350px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(5) { left:490px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(6) { left:630px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(7) { left:770px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(8) { left:910px; }
+
+.container .inner .content .history .history-cont .history-detail {
+    width:100%; height: 800px;
+    position:relative; top:200px; left:0;
+}
+.container .inner .content .history .history-cont .history-detail img {
+    padding-left:100px;
+    position:absolute; left:0;top:0px;
+    opacity:0;
+}
+
+/* 회사소개 - 윤리경영, 오시는 길 */
+.container .inner .content .company {
+    margin-top:25px; margin-left:20px;
+}
+.container .inner .content .company p {
+    font-size:1.3rem;
+    padding:10px;
+}
+.container .inner .content .company img {
+    padding: 10px;
+}
+
+/* 회사소개 - 채용공고 */
+.container .inner .recruit {
+    width:100%; height: 700px; 
+    padding:80px;
+    font-size:1.8rem; color:rgb(75, 75, 75);
+    text-align:center;
+}
+.container .inner .recruit p:nth-child(2) {
+    margin:40px auto;
+    font-size:1.2rem;
+}
+.container .inner .recruit p:nth-child(2) i {
+    font-size:2rem;
+}
+.container .inner .recruit input {
+    margin-top:10px;
+    width:350px;height:68px;
+    border:6px solid coral;
+    text-indent:10px; font-size:1.2rem;
+}
+.container .inner .content .recruit div button {
+    width:100px; height:40px;
+    margin:30px auto;
+    border:none;
+    cursor:pointer;
+}
+.container .inner .content .recruit button:hover {
+    background:coral; color:white;
+}
