@@ -30,17 +30,17 @@ body { background: #ffd000; }
 }
 
 /* 컨테이너 - 메인 컨텐츠 */
-.container .inner #content-main { outline:0px solid black;
+.container .inner #content-main { 
     width:1200px; height:520px;
     position:absolute; top:0;left:0;
     box-shadow:10px 8px 12px 9px rgba(49, 15, 0, 0.3);
     display:flex;
+    display:none;
 }
 .container .inner #content-main .blank { 
     width:1200px; height:520px;
-    display:block;
+    display:none;
     position:absolute;
-    outline:0px solid pink;
 }
 
 /* 지구 그림 */
@@ -156,8 +156,7 @@ body { background: #ffd000; }
 }
 .container .inner_m h1 {
     height:fit-content; 
-    margin-top:50px;
-    margin-bottom:50px;
+    margin-top:80px;
     font-size:1rem;
 }
 .container .inner_m h1:first-child {
@@ -170,65 +169,64 @@ body { background: #ffd000; }
 }
 .container .inner_m .banner_m {
     width:100%;
+    margin-top:45px;
 }
-.container .inner_m .banner-brand {
-    border:1px solid black;
-    width:100%; height:200px;  
-    margin:10px 0;
-}
+
 .container .inner_m .banner-company{
     height:180px;
 }
 .container .inner_m .banner-sns{
     height:500px;
 }
-.container .inner_m .banner-company div {
-    width:100%; height:50%;
+.container .inner_m .banner_m .swiper-container .swiper-wrapper .swiper-slide img {
+    width:100%; height:200px;
+    cursor:pointer;
 }
-.container .inner_m .banner-company div:nth-child(1) {
-    background:url(../images/m_banner3.png) no-repeat;
-    background-position: start;
-    background-size:cover;
+.container .inner_m .banner_m .swiper-container .swiper-wrapper .swiper-slide p {
+    font-size:1.5vh;
+    padding:12px; height:80px;
+    background:rgba(255, 255, 255, 0.6);
+    border-radius:3px;
+    cursor:pointer;
 }
-.container .inner_m .banner-company div:nth-child(2) {
-    background:url(../images/m_banner4.png) no-repeat;
-    background-position: start;
-    background-size:cover;
+.container .inner_m .banner_m .swiper-container2 {
+    overflow:hidden;
+    height:145px;
 }
-
-.container .inner_m .banner-brand .banner-img_m {
-    width:100%; height:150px;
-    display:flex; justify-content:space-around;
+.container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide a img {
+    width:100%; height:110px;
 }
-.container .inner_m .banner-brand .banner-txt_m {
-    width:100%; height:50px;
-    margin-top:3px;
-    display:flex; justify-content:space-around;
+.container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide p {
+    font-size:1.5vh;
+    background:rgba(255, 255, 255, 0.6);
+    border-radius:50px;
+    width:80%; height:3vh; line-height:3vh;
+    box-shadow:0 0 1px black;
+    margin:0 auto;
 }
-.container .inner_m .banner-brand .banner-txt_m p{
-    border:1px solid black;
-    text-align: center; line-height:20px;
-    flex:1;
+.swiper-pagination {
+    position:relative;
+    margin:20px auto;
 }
-.container .inner_m .banner-brand .banner-img_m div {
-    flex:1;
+.swiper-pagination-bullet {
+    background:#e7451c;
 }
-.container .inner_m .banner-brand .banner-img_m div:nth-child(1) {
-    background:url(../images/m_banner1.png) no-repeat;
-    background-position: center;
-    background-size:contain;
-    margin-right:3px;
+.swiper-button-prev {
+    background-image: url(../images/page_arrow_left.png);
+    background-size:300%;
+    width:15px;height:15px;
+    position: relative; top:-60px;
 }
-.container .inner_m .banner-brand .banner-img_m div:nth-child(2) {
-    background:url(../images/m_banner1.png) no-repeat;
-    background-position: center;
-    background-size:contain;
-    margin-left:3px;
+.swiper-button-next {
+    background-image: url(../images/page_arrow_right.png);
+    background-size:300%;
+    width:15px; height:15px;
+    position: relative; top:-60px; left:95%;
 }
 .container .inner_m .banner-sns .sns_m {
-    width:70%; margin:10px auto;
+    width:70%; margin:0px auto;
     display:flex; justify-content:space-around;
-    color:#e7451c;
+    color:#e7451c; 
 }
 .container .inner_m .banner-sns .sns_m div {
     width:30px;height:30px; line-height:30px;
@@ -249,64 +247,112 @@ body { background: #ffd000; }
 .container .inner_m .banner-sns .instagram .insta-img {
     width:100%; height:410px;
     display:grid; grid: '. . .';
-    row-gap:0.5%;
-    column-gap:0.5%;
-    grid-template-rows: 30% 30% 30%;
-    grid-template-columns: 33%;
+    row-gap:0.5%; column-gap:0.5%;
 }
 .container .inner_m .banner-sns .instagram .insta-img div {
     cursor:pointer;
+    width:100%;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:after {
+    content:''; display:none;
+    width:100%; height:100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    position:relative; top:0;left:0;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:hover:after {
+    display:block;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(1) {
+    background: url(../images/insta1.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(2) {
+    background: url(../images/insta2.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(3) {
+    background: url(../images/insta3.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(4) {
+    background: url(../images/insta4.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(5) {
+    background: url(../images/insta5.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(6) {
+    background: url(../images/insta6.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(7) {
+    background: url(../images/insta7.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(8) {
+    background: url(../images/insta8.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+.container .inner_m .banner-sns .instagram .insta-img div:nth-child(9) {
+    background: url(../images/insta9.jpg) no-repeat;
+    background-size:contain;
+    background-position: center;
 }
 .container .inner_m .banner-sns .instagram .m_modal {
-    background: rgba(0,0,0,0.5);
-    position:absolute; top:40px; left:0;
-    width:100%; height:378px;
+    background: rgba(0, 0, 0, 0.6);
+    position:absolute; top:30px; left:0;
+    width:100%; height:430px;
     cursor:pointer;
     display:none;
 }
 .container .inner_m .banner-sns .instagram .m_modal .m_modal-cont{
     background:white;
-    position:absolute; top:20px; left:20px;
-    width: 300px; height:300px;
+    position:absolute; top:85px; left:6%;
+    width: 433px; height:260px;
     display:none;
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(1) {
-    background: url(../images/choco_1.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-sns .instagram .m_modal .m_modal-cont div {
+    float:left;
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(2) {
-    background: url(../images/choco_2.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-sns .instagram .m_modal .m_modal-cont .insta-modal-img {
+    width:60%
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(3) {
-    background: url(../images/choco_3.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-sns .instagram .m_modal .m_modal-cont .insta-modal-img img {
+    width:100%;
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(4) {
-    background: url(../images/choco_4.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-sns .instagram .m_modal .m_modal-cont .insta-modal-txt {
+    width:40%
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(5) {
-    background: url(../images/choco_1.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-sns .instagram .m_modal .m_modal-cont .insta-modal-txt p {
+    text-align:start;
+    padding:7px;
+    font-size:1.8vh;
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(6) {
-    background: url(../images/choco_1.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-company a {
+    width:100%; height:50%;
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(7) {
-    background: url(../images/choco_1.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-company a div {
+    width:100%; height:100%;
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(8) {
-    background: url(../images/choco_1.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-company a:nth-child(1) div {
+    background:url(../images/m_banner3.png) no-repeat;
+    background-position: start;
+    background-size:cover;
 }
-.container .inner_m .banner-sns .instagram .insta-img div:nth-child(9) {
-    background: url(../images/choco_1.jpg) no-repeat;
-    background-size:100% 100%;
+.container .inner_m .banner-company a:nth-child(2) div {
+    background:url(../images/m_banner4.png) no-repeat;
+    background-position: start;
+    background-size:cover;
 }
-
 @media screen and (max-width:1260px) and (min-width:768px) {
     header, footer { min-width:auto; }
     .container .inner { width:760px; }
@@ -318,7 +364,7 @@ body { background: #ffd000; }
     .container .inner .content-list:hover .content {
         display:none;
     }
-    .container .inner .content-list:hover .content_m {
+    .container .inner .content-list .content_m {
         display:block;
     }
 }
@@ -339,10 +385,10 @@ body { background: #ffd000; }
     .container .inner .content-list:hover .content {
         display:none;
     }
-    .container .inner .content-list:hover .content_m {
+    .container .inner_m {
         display:block;
     }
-    .container .inner_m {
+    .container .inner .content-list .content_m {
         display:block;
     }
 }

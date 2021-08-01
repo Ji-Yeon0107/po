@@ -1,6 +1,6 @@
 .container {
     border:0px solid black;
-    min-width:0;
+    min-width:100%;
 }
 .container .inner {
     width:100%; 
@@ -11,7 +11,7 @@
     display:none;
 }
 .container> .inner> .snb {
-    width:68%; height:45px;
+    width:68%; height:40px;
     margin:0 auto;
     padding-top:50px;
     padding-bottom:50px;
@@ -24,7 +24,7 @@
     display:flex;
 }
 .container .inner .snb ul li {
-    height:45px; line-height:45px; 
+    height:40px; line-height:40px; 
     text-indent:0px; text-align:center;
     cursor:pointer;
     transition:height 0.8s;
@@ -42,8 +42,8 @@
     line-height:40px;
     text-indent:0px;
     background-color:#fff;
+    border-top:1px solid rgba(255, 127, 80, 0.2);
  }
-
 /* 마켓오 네이쳐 그래놀라 */
 .container .inner .content .shelf .shelf-box {
     grid-template-columns:repeat(3, 1fr);
@@ -51,10 +51,6 @@
 .container .inner .content .shelf .shelf-box-txt {
     grid-template-columns: repeat(3, 1fr); 
 }
-
-
-
-
 
 
 

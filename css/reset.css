@@ -27,7 +27,7 @@ header { border:0px solid black;
     min-width:1510px;
     height: 80px; 
     background-color: #ffd000;
-    position:relative; z-index:130;
+    position:relative; z-index:1000;
     display:flex; justify-content:center;
 }
 footer {
@@ -144,47 +144,58 @@ header .logo_m {
 
 header .gnb-btn_m {
     font-size:45px; color:#e7451c;
-    position:absolute; right:30px;
+    position:absolute; 
     cursor:pointer;
     display:none;
 }
 header .gnb-btn-close_m {
+    position:fixed; right:25px;
     color:white;
-    z-index:51;
+    z-index:70;
+    opacity:0;
+}
+header .gnb-btn-bars_m {
+    z-index:80;
+    right:25px;
 }
 header .gnb_m {
     background:#63371a;
-    width:64%; min-height:100vh;
+    width:75%; min-height:100vh; height:100%;
     box-sizing:border-box;
-    position:fixed; right:0;
+    position:fixed; 
     z-index:50;
     display:none;
+    opacity:0; right:-50%;
     cursor:pointer;
 }
 header .gnb_m a {
     display:block;
 }
 header .gnb_m .nav__depth1 {
-    outline:1px solid white;
-    width:100%; padding:10px;
+    width:100%;
+    padding:10px 0 10px 30px;
+    margin-left:20px;
     color:#fff; font-weight:100;
+    border-bottom:1px solid rgba(255, 255, 255, 0.2);
+    position:relative;
+}
+header .gnb_m .nav__depth1 span {
+    position:absolute; right:100px; top:15px;
+}
+header .gnb_m .nav__depth1 span img {
+    width:15px;
 }
 header .gnb_m .nav__depth1:first-child {
     margin-top:80px;
 }
 header .gnb_m .nav__depth1 .nav__depth2 {
     text-indent: 15px;
-    width:100%; padding: 8px;
-    background:white; color:black;
+    width:100%; padding: 7px;
     display:none;
 }
-header .gnb_m .nav__depth1 .nav__depth2 .nav__depth3 {
-    text-indent: 30px;
-    width:100%; padding: 2px;
-    background:white; color:black;
-    display:none;
+header .gnb_m .nav__depth1 .nav__depth2:nth-child(2) {
+    margin-top:10px;
 }
-
 
 /* 로고 미디어 쿼리 */
 @media screen and (max-width:2200px) and (min-width:1951px) {
@@ -208,9 +219,10 @@ header .gnb_m .nav__depth1 .nav__depth2 .nav__depth3 {
 }
 /* 헤더(메뉴),푸터 미디어 쿼리 */
 @media screen and (max-width:1200px) and (min-width:768px) {
-    header, footer { min-width:0; }
+    header, footer { min-width:100%; }
 }
 @media screen and (max-width:767px)  {
+    header, footer { min-width:100%; }
     header{ justify-content:start;}
     footer { display:none; }
     .footer_m { display:block; }
@@ -218,6 +230,9 @@ header .gnb_m .nav__depth1 .nav__depth2 .nav__depth3 {
         display:none;
     }
     header .gnb-btn-bars_m {
+        display:block;
+    }
+    header .gnb-btn-close_m {
         display:block;
     }
 }
