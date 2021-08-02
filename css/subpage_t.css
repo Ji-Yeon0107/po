@@ -7,6 +7,7 @@
     display:block;
 }
 .container>.inner >h1,
+.container>.inner > .content> h2,
 .container .inner .content .depth {
     display:none;
 }
@@ -44,73 +45,8 @@
     background-color:#fff;
     border-top:1px solid rgba(255, 127, 80, 0.2);
  }
-/* 마켓오 네이쳐 그래놀라 */
-.container .inner .content .shelf .shelf-box {
-    grid-template-columns:repeat(3, 1fr);
-}
-.container .inner .content .shelf .shelf-box-txt {
-    grid-template-columns: repeat(3, 1fr); 
-}
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* 상단 메뉴 */
-.container .inner .content_m .topmenu_m {
-    width:100%;
-}
-.container .inner .content_m .topmenu_m h1 {
-    border:0px solid rgb(150, 148, 148);
-    text-align:center;
-    margin:20px 0;
-}
-.container .inner .content_m .topmenu_m .topmenu-list_m {
-    width:68%; height:45px;
-    margin:50px auto;
-    display:flex; justify-content: center;
-}
-.container .inner .content_m .topmenu_m .topmenu-list_m div {
-    border:1px solid coral;
-    flex:1;
-    height:100%; line-height:45px; text-align:center;
-    cursor:pointer;
-}
-.container .inner .content_m .topmenu_m .topmenu-list_m div:first-child {
-    background:coral; color:white;
-}
-
-/*              메인 컨텐츠            */
-.container .inner .content_m .main_m {
-    border:0px solid black;
-    width:100%;
-    position:absolute;
-    display:none;
-}
-.container .inner .content_m .main1_m {
-    display:block;
-}
-.container .inner .content_m .main_m img {
-    display:block;
-    position:relative; margin:0 auto;
-    margin-top:60px;
-    width:70%;
-}
-.container .inner .content_m .main_m .brand-cont {
-    border:2px solid red;
-}
-
-.container .inner .content_m .main2_m {
-  
-}
 /* 신제품 */
 .container .inner .content .product { 
     grid:repeat(3, 1fr) / auto-flow;
@@ -129,62 +65,46 @@
 .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer4 .detail-snow {
     left:150px;
 }
+/* 마켓오 네이쳐 그래놀라 */
+.container .inner .content .shelf .shelf-box {
+    grid-template-columns:repeat(3, 1fr);
+}
+.container .inner .content .shelf .shelf-box-txt {
+    grid-template-columns: repeat(3, 1fr); 
+}
 
-/*                    마켓오 - 마켓오 네이쳐                      */
-.container .inner .content_m .main_m .shelf {
-    position:relative;
-    width:100%; height:1000px;
-}
-/* 진열된 그래놀라,그래놀라 바 이미지, 텍스트 */
-.container .inner .content_m .main_m .shelf .shelf-box {
-    margin:50px auto;
-    width:100%; 
-    display:grid;
-    grid:'. . .'; row-gap: 120px;
-    border:4px solid black;
-} 
-.container .inner .content_m .main_m .shelf .shelf-box img {
-    margin: 0 auto;
-}
-.container .inner .content_m .main_m .shelf .shelf-box .modal-btn {
-    transition:all 0.6s;
-    cursor:pointer;
-    position:relative; z-index:2; 
-}
-.container .inner .content_m .main_m .shelf .shelf-box .modal-btn:hover { /*호버*/
-    transform:scale(1.2) translatez(30px);
-}
-.container .inner .content_m .main_m .shelf .shelf-box-txt {
-    width:100%; height:600px;
-    position:absolute; z-index:1;
-    text-align:center;
-    display:grid; grid:'. . .';  row-gap: 270px;
-    cursor:pointer;
-}
-.container .inner .content_m .main_m .shelf .shelf-box-txt li{
-    /* float:left;  */
-    border:1px solid green;
-    grid:1; height:40px;
-    position:relative;
-}
- .container .inner .content_m .main_m .shelf .shelf-box-txt li:nth-child(1),.container .inner .content_m .main_m .shelf .shelf-box-txt li:nth-child(2),.container .inner .content_m .main_m .shelf .shelf-box-txt li:nth-child(3) {
-    margin-top:210px;
-} 
 /* 그래놀라, 그래놀라 바 이미지 팝업 */
-.gran-modal { 
-    display:none; 
-    position:absolute; left:0;top:0; z-index:2;
-    width:100%; height:100%;
-    background:rgba(0,0,0,0.7);
-    cursor:pointer;   
-}
+
 .gran-modal .gran-modal-cont {  
-    position:relative; margin:140px auto;
+    position:absolute; top:200px; left:15%;
     width:60%;
     border-radius:20px;
-    background:#fff;
 }
-
+/* 회사소개 */
+.container .inner .content .history .history-year {
+    position:absolute; top:170px; left:0px;
+    padding-left:0px;
+}
+.container .inner .content .history .history-year li {
+    float:left; width:118px; height:100%;
+    text-indent:25px;
+}
+.container .inner .content .history .history-year li:first-child {
+    text-indent:18px;
+}
+.container .inner .content .history .history-cont .timeline {
+    top:82px; left:50px;
+    width:710px; height:1px;
+    border-bottom:1px solid red;
+}   
+/* 각 빨간동그라미 별 위치 */
+.container .inner .content .history .history-cont .timeline-point:nth-child(2) { left:30px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(3) { left:150px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(4) { left:270px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(5) { left:390px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(6) { left:510px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(7) { left:630px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(8) { left:750px; }
 
 
 

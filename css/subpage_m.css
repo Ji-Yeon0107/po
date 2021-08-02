@@ -6,12 +6,19 @@
     width:100%; 
     display:block;
 }
+.container .inner .content p,
+.container .inner .content h2 {
+    padding-left:0;
+    text-indent:10px;
+}
+
 .container>.inner >h1,
+.container>.inner > .content> h2,
 .container .inner .content .depth {
     display:none;
 }
 .container> .inner> .snb {
-    width:68%; height:40px;
+    width:95%; height:40px;
     margin:0 auto;
     padding-top:50px;
     padding-bottom:50px;
@@ -45,53 +52,6 @@
     border-top:1px solid rgba(255, 127, 80, 0.2);
  }
 
-/* 마켓오 네이쳐 그래놀라 */
-.container .inner .content .shelf .shelf-box {
-    grid-template-columns:repeat(3, 1fr);
-}
-.container .inner .content .shelf .shelf-box-txt {
-    grid-template-columns: repeat(3, 1fr); 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 상단 메뉴 */
-.container .inner .content_m .topmenu_m {
-    width:100%;
-}
-.container .inner .content_m .topmenu_m h1 {
-    border:0px solid rgb(150, 148, 148);
-    text-align:center;
-    margin:20px 0;
-}
-.container .inner .content_m .topmenu_m .topmenu-list_m {
-    width:68%; height:45px;
-    margin:50px auto;
-    display:flex; justify-content: center;
-}
-.container .inner .content_m .topmenu_m .topmenu-list_m div {
-    border:1px solid coral;
-    flex:1;
-    height:100%; line-height:45px; text-align:center;
-    cursor:pointer;
-}
-.container .inner .content_m .topmenu_m .topmenu-list_m div:first-child {
-    background:coral; color:white;
-}
 
 /*              메인 컨텐츠            */
 .container .inner .content_m .main_m {
@@ -118,86 +78,180 @@
 }
 /* 신제품 */
 .container .inner .content .product { 
-    grid:repeat(3, 1fr) / auto-flow;
+    grid:'. .'; justify-content:center;
+}
+.container .inner .content .product .product-list{
+    height:195px; width:90%;
+    margin:0;
+}
+.container .inner .content .product-modal .product-modal-cont{
+    position:absolute; top:200px; left:15%;
+    width:70%;
+    border-radius:20px;
 }
 /* 초코파이 하우스 */
 .container .inner .content .cont-chocopie .chocopie-detail img {
-    width:auto;
-    position:absolute; top:195px; left: 180px;
+    width:300px;
+    position:absolute; top:130px; left: 23%;
+}
+.container .inner .content .cont-chocopie .chocopie-detail {
+    height:650px;
 }
 .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail {
-    margin-left:-120px;
+    height:520px;
+}
+.container .inner .content .cont-chocopie .txt-hover {
+    top:200px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer .pointer-line {
+    display:none;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer {
+    display:block;
+    margin:0;
+    position:relative; top:330px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list  {
+    position:relative; margin:5px auto;
+    top:-150px; left:50px;
+}
+ .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer:after {
+    display:none;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer1 .detail-chocolate {
+    top: 195px; left:100px;
+}
+.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer2 .detail-filling {
+    top: 175px; left:100px;
 }
 .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer3 .detail-biscuit {
-    left:160px;
+    top: 150px; left:100px;
 }
 .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer4 .detail-snow {
-    left:150px;
+    top: 125px; left:100px;
 }
-
-/*                    마켓오 - 마켓오 네이쳐                      */
-.container .inner .content_m .main_m .shelf {
-    position:relative;
-    width:100%; height:1000px;
+.container .inner .content .cont-chocopie .chocopie-gift div img {
+    width:70%;
 }
-/* 진열된 그래놀라,그래놀라 바 이미지, 텍스트 */
-.container .inner .content_m .main_m .shelf .shelf-box {
-    margin:50px auto;
-    width:100%; 
-    display:grid;
-    grid:'. . .'; row-gap: 120px;
-    border:4px solid black;
-} 
-.container .inner .content_m .main_m .shelf .shelf-box img {
-    margin: 0 auto;
+.container .inner .content .cont-chocopie .chocopie-flavor {
+    height:1300px;
 }
-.container .inner .content_m .main_m .shelf .shelf-box .modal-btn {
-    transition:all 0.6s;
-    cursor:pointer;
-    position:relative; z-index:2; 
+.container .inner .content .cont-chocopie .chocopie-flavor ul {
+    width:100%; margin:80px auto;
 }
-.container .inner .content_m .main_m .shelf .shelf-box .modal-btn:hover { /*호버*/
-    transform:scale(1.2) translatez(30px);
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img { 
+    width:100% ;
+    display:flex; justify-content:center;
 }
-.container .inner .content_m .main_m .shelf .shelf-box-txt {
-    width:100%; height:600px;
-    position:absolute; z-index:1;
-    text-align:center;
-    display:grid; grid:'. . .';  row-gap: 270px;
-    cursor:pointer;
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img:after,
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img .img-txt2  {
+    display:none;
 }
-.container .inner .content_m .main_m .shelf .shelf-box-txt li{
-    /* float:left;  */
-    border:1px solid green;
-    grid:1; height:40px;
-    position:relative;
-}
- .container .inner .content_m .main_m .shelf .shelf-box-txt li:nth-child(1),.container .inner .content_m .main_m .shelf .shelf-box-txt li:nth-child(2),.container .inner .content_m .main_m .shelf .shelf-box-txt li:nth-child(3) {
-    margin-top:210px;
-} 
-/* 그래놀라, 그래놀라 바 이미지 팝업 */
-.gran-modal { 
-    display:none; 
-    position:absolute; left:0;top:0; z-index:2;
-    width:100%; height:100%;
-    background:rgba(0,0,0,0.7);
-    cursor:pointer;   
-}
-.gran-modal .gran-modal-cont {  
-    position:relative; margin:140px auto;
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img img {
     width:60%;
-    border-radius:20px;
-    background:#fff;
+}
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img .img-txt { 
+    line-height:150px;
+    text-indent:30px;
+}
+.container .inner .content .cont-chocopie .chocopie-gift div ul li p { font-size:2vh; line-height:2;}
+.container .inner .content .cont-chocopie .chocopie-gift div ul li p:nth-child(2) { font-size:1vh; }
+
+/* 점포 */
+.container .inner .content .store-box .store-list {
+    width:100%;
+    margin:0px auto;
+    margin-top:40px;
+}    
+.container .inner .content .store-box .store-list img {
+    display:block;
+    width:100%;
 }
 
 
+/* 마켓오 네이쳐 그래놀라 */
+.container .inner .content .shelf .shelf-box {
+    grid-template-columns:repeat(2, 1fr);
+}
+.container .inner .content .shelf .shelf-box-txt {
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+/* 그래놀라, 그래놀라 바 이미지 팝업 */
+.gran-modal .gran-modal-cont {  
+    position:absolute; top:200px; left:15%;
+    width:70%; height: 520px;
+    border-radius:20px;
+}
+.gran-modal .gran-modal-cont p {
+    text-indent:25px; padding-right:25px;
+}
 
 
-
-
-
-
-
+/*                    고객의견                   */
+.container .inner .content .cont-customer {
+    width:100%;
+    padding:10px;
+}
+.container .inner .content .cont-customer div input[name="writer"]{
+    width:140px;
+}
+.container .inner .content .cont-customer div input[name="title"]{
+    width:90%;
+}
+.container .inner .content .cont-customer label[for="question-select"] { width:100px;}
+.container .inner .content .cont-customer #question-select {
+    height:30px;
+}
+.container .inner .content .cont-customer textarea[name="content"] {
+    width:90%; height:400px;
+    border:1px solid #bbbbbb;
+    padding:10px; font: normal 1rem normal;
+    resize:none;
+}
+.container .inner .content .cont-customer button {
+    width:100px; height:40px;
+    margin:30px auto;
+    border:none;
+    cursor:pointer;
+}
+/*                    회사소개                  */
+/* 연혁 */
+.container .inner .content .pc,
+.container .inner .content .history-title,
+.container .inner .content .history { display: none; }
+.container .inner .content .history_m { display:block; }
+.container .inner .content .history_m ul {
+    margin-top:70px;
+    width:100%; 
+}
+.container .inner .content .history_m ul li {
+    width:100%; display:flex;
+    padding-bottom:15px;
+}
+.container .inner .content .history_m ul li div:nth-child(1) {
+    text-indent:25px; flex:1;
+}
+.container .inner .content .history_m ul li div:nth-child(2) {
+    flex:2; padding-right:25px;
+}
+/* 채용 */
+.container .inner .recruit input {
+    width:90%;height:68px;
+    text-indent:10px; font-size:1.2rem;
+}
+/* 윤리경영, 오시는 길 */
+.container .inner .content .company {
+    margin-top:25px; margin-left:20px;
+    height:700px;
+}
+.container .inner .content .company p {
+    font-size:1.3rem;
+    padding:10px;
+}
+.container .inner .content .company img {
+    width:90vw;
+}
 
 /* 마켓오,닥터유,제주용암수
 이미지 하나 있는 페이지 */

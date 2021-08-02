@@ -152,7 +152,7 @@ header .gnb-btn-close_m {
     position:fixed; right:25px;
     color:white;
     z-index:70;
-    opacity:0;
+    display:none;
 }
 header .gnb-btn-bars_m {
     z-index:80;
@@ -232,7 +232,5 @@ header .gnb_m .nav__depth1 .nav__depth2:nth-child(2) {
     header .gnb-btn-bars_m {
         display:block;
     }
-    header .gnb-btn-close_m {
-        display:block;
-    }
+
 }

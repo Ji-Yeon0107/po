@@ -1,5 +1,24 @@
 window.onload = function() { 
 $(function() {
+    //(PC) snb
+
+    $('.snb-list').mouseenter(function() {
+        var i = $(this).index()-1;
+        var listHeight = 40 *($(this).children().length+1);
+        $(this).eq(i).css("height", listHeight);
+    });
+
+    $('.snb-list').mouseleave(function() {
+        var i = $(this).index()-1;
+        $(this).eq(i).css("height", "40");
+    })
+    
+        var removeEvent = $(function() {     
+        if (matchMedia("screen and (max-width:1200px)").matches) {
+            $('.snb-list').off("mouseenter");
+            $('.snb-list').off("mouseleave");
+        }
+    });
     // 모달창
     $('.modal-btn').on("click", function() {
         var i = $(this).index();
@@ -24,62 +43,32 @@ $(function() {
         $('.history-detail>img').css('opacity','0');
         $('.history-detail>img').eq(j).animate({opacity:'1'}, 600);
     });
-    //(PC) snb
-    $('.snb-list').mouseenter(function() {
-        var i = $(this).index()-1;
-        var he = 40;
-        var listHeight = 40 *($(this).children().length-1) + he;
-        $(this).eq(i).css("height", listHeight);
-    });
-
-    $('.snb-list').mouseleave(function() {
-        var i = $(this).index()-1;
-        var he = 40;
-        $(this).eq(i).css("height", he);
-    })
-        var removeEvent = $(function() {     
-        if (matchMedia("screen and (max-width:1200px)").matches) {
-            $('.snb-list').off("mouseenter");
-            $('.snb-list').off("mouseleave");
-        }
-    });
- // (모바일) 서브페이지에서 메뉴클릭 
-        $('.snb-list').on("click", function() {
-                $('.snb-list').css("height","40px");
-                $('.snb-list-dep2').css("color","black");
-                $(this).css("height","122px");
-            })
- 
-    })
     
- 
+// 태블릿, 모바일
 
-
+    // (모바일) 서브페이지에서 메뉴클릭 
+    $('.snb-list').on("click", function() {
+        var listHeight = 40 *($(this).children().length+1);
+            $('.snb-list').css("height","40px");
+            $('.snb-list-dep2').css("color","black");
+            $(this).css("height",listHeight);
+        })
     
-    // 서브페이지 - 초코파이 하우스 - 제품 소개
-    $('.img-pointer').on("click", function() {
-        if ($(this).children('.detail-all').css("opacity")=="0") {
-            $(this).children('.detail-all').animate({opacity:"1"}, 400)
-            $(this).children('.pointer-line').animate({opacity:"1"}, 50)
-            $('.detail-all').css("opacity","0");
-            $('.pointer-line').css("opacity","0");
-        } else {    
-        }
-    })
-// 모바일
-
     // 네비바 등장
+    $('.gnb_m').hide();
+    $('.gnb-btn-close_m').hide();
     $('.gnb-btn-bars_m').on("click", function() {
         $('.gnb_m').show();
+        $('.gnb-btn-close_m').show();
         $('.gnb_m').animate({opacity:"1", right:"0"}, 500);
-        // $('.gnb_m').animate({right:"0"}, 1000);
         $('.gnb-btn-close_m').animate({opacity:"1"}, 500);
+
         $('.nav__depth2').css("display","none");
         $(this).hide();
-
     });
     $('.gnb-btn-close_m').on("click", function() {
-        $('.gnb_m').animate({opacity:"0", right:"-50%"}, 500);
+        $('.gnb_m').css({opacity:"0", right:"-50%"});
+        $('.gnb_m').hide();
         $(this).animate({opacity:"0"}, 200);
         $('.gnb-btn-bars_m').show();
     }); 
@@ -96,48 +85,58 @@ $(function() {
     $('.nav__depth2').on("click", function() {
         $('.gnb_m').hide();
         $('.gnb-btn-close_m').hide();
-
+        $('.gnb-btn-bars_m').show();
     }) 
     // 인덱스 메인 상단 이미지
-    var contentLength = $(".content_m").length;
+    var banner = $(".content-list_m");
+    var bannerLength = banner.find("img").length;
     var currentIndex = 0;
+
+    $(".next").click(function(){ 
+        currentIndex++; 
+        if(currentIndex >= bannerLength){ currentIndex=0; }; 
+        showImage(currentIndex); 
+    });
+    $(".prev").click(function(){ 
+        currentIndex--;
+        if(currentIndex < 0){ currentIndex=bannerLength -1; }; 
+        showImage(currentIndex);
+    });
+    function showImage(index) {
+        $(".content-list_m>img").stop().fadeOut(1000);
+        $(".content-list_m>img").eq(index).stop().fadeIn(2000);
+    };
     var current = 0;
     var timeID;
     timer();
+    
+    $(".inner").on({
+        mouseenter:function() {
+            clearInterval(timeID);
+        },
+        mouseleave:function() {
+            timer();
+        }
+    })
     function timer() {
         timeID = setInterval(function(){
-            currentIndex++;
-            if(currentIndex >= contentLength) { currentIndex=0 };
-            showImage(currentIndex);
-        })
+            $(".next").trigger("click");
+        }, 3000);
     };
-    function showImage(i) {
-        $(".content_m").fadeOut(2000);
-        $(".content_m").eq(i).fadeIn(2000);
-    }
-    
- 
 
-// SWIPER
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView:2,
-    slidesPerGroup:2,
-    spaceBetween:10,
-    loop: true, 
-        pagination: {
-            el: '.swiper-pagination',
-            dynamicBullets: true,
-        },
-  });
-  var swiperBrand = new Swiper('.swiper-container2', {
-    slidesPerView:3,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-  });
-
+    // 서브페이지 - 초코파이 하우스 - 제품 소개
+    $('.img-pointer').on("click", function() {
+        if ($(this).children('.detail-all').css("opacity")=="0") {
+            $(this).children('.detail-all').animate({opacity:"1"}, 400)
+            $(this).children('.pointer-line').animate({opacity:"1"}, 50)
+            $('.detail-all').css("opacity","0");
+            $('.pointer-line').css("opacity","0");
+        } else {    
+        }
+    })
+});
 }
+
 
 
 
