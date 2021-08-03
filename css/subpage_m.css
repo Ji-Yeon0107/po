@@ -166,7 +166,10 @@
     grid-template-columns: repeat(2, 1fr); 
 }
 .container .inner .content .product .product-list:after {
-display:none;
+    display:none;
+}
+.container .inner .content .product-modal .product-modal-cont{
+    width:90%; height:600px;
 }
 
 /* 그래놀라, 그래놀라 바 이미지 팝업 */
