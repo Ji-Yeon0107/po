@@ -162,6 +162,9 @@
 .container .inner .content .shelf .shelf-box {
     grid-template-columns:repeat(2, 1fr);
 }
+.container .inner .content .shelf .shelf-box .modal-btn {
+    width:100%;
+}
 .container .inner .content .shelf .shelf-box-txt {
     grid-template-columns: repeat(2, 1fr); 
 }
