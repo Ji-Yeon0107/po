@@ -191,8 +191,9 @@ body { background: #ffd000; }
 .container .inner_m .banner-sns{
     height:500px;
 }
+
 .container .inner_m .banner_m .swiper-container .swiper-wrapper .swiper-slide img {
-    width:100%; height:200px;
+    width:100%;
     cursor:pointer;
 }
 .container .inner_m .banner_m .swiper-container .swiper-wrapper .swiper-slide p {
@@ -204,10 +205,9 @@ body { background: #ffd000; }
 }
 .container .inner_m .banner_m .swiper-container2 {
     overflow:hidden;
-    height:145px;
 }
 .container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide a img {
-    width:100%; height:110px;
+    width:100%;
 }
 .container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide p {
     font-size:1.5vh;

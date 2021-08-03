@@ -90,8 +90,8 @@
     margin-left:2%; margin-right:2%;
 } */
 .container .inner .content .product-modal .product-modal-cont{
-    position:absolute; top:200px; left:15%;
-    width:70%;
+    position:absolute; top:200px; left:5%;
+    width:90%; height: 520px;
     border-radius:20px;
 }
 /* 초코파이 하우스 */
