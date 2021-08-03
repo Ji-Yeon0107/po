@@ -5,6 +5,7 @@
 .container .inner {
     width:100%; 
     display:block;
+    padding-top:80px;
 }
 .container .inner .content p,
 .container .inner .content h2 {
@@ -90,6 +91,8 @@
     border-radius:20px;
 }
 /* 초코파이 하우스 */
+.container .inner .content .cont-chocopie .chocopie-flavor ul .flavor-img:nth-child(odd) { margin-right:0px; }
+
 .container .inner .content .cont-chocopie .chocopie-detail img {
     width:300px;
     position:absolute; top:130px; left: 23%;
@@ -101,40 +104,19 @@
     height:520px;
 }
 .container .inner .content .cont-chocopie .txt-hover {
-    top:200px;
-}
-.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer .pointer-line {
     display:none;
+}
+.container .inner .content .cont-chocopie .chocopie .txt-large{ 
+    font:normal 1.8rem Noto Sans KR;
 }
 .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer {
-    display:block;
-    margin:0;
-    position:relative; top:330px;
-}
-.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list  {
-    position:relative; margin:5px auto;
-    top:-150px; left:50px;
-}
- .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer:after {
     display:none;
-}
-.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer1 .detail-chocolate {
-    top: 195px; left:100px;
-}
-.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer2 .detail-filling {
-    top: 175px; left:100px;
-}
-.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer3 .detail-biscuit {
-    top: 150px; left:100px;
-}
-.container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail .chocopie-detail-list .img-pointer4 .detail-snow {
-    top: 125px; left:100px;
 }
 .container .inner .content .cont-chocopie .chocopie-gift div img {
     width:70%;
 }
 .container .inner .content .cont-chocopie .chocopie-flavor {
-    height:1300px;
+    height:1500px;
 }
 .container .inner .content .cont-chocopie .chocopie-flavor ul {
     width:100%; margin:80px auto;
@@ -150,13 +132,16 @@
 .container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img img {
     width:60%;
 }
-.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img .img-txt { 
+.container .inner .content .cont-chocopie .chocopie-flavor  ul .flavor-img .img-txt {
+    width:100%; height:150px; 
     line-height:150px;
     text-indent:30px;
 }
 .container .inner .content .cont-chocopie .chocopie-gift div ul li p { font-size:2vh; line-height:2;}
 .container .inner .content .cont-chocopie .chocopie-gift div ul li p:nth-child(2) { font-size:1vh; }
-
+.container .inner .content .cont-chocopie .chocopie-gift div ul li { 
+    width:30%
+}
 /* 점포 */
 .container .inner .content .store-box .store-list {
     width:100%;
@@ -179,8 +164,9 @@
 
 /* 그래놀라, 그래놀라 바 이미지 팝업 */
 .gran-modal .gran-modal-cont {  
-    position:absolute; top:200px; left:15%;
-    width:70%; height: 520px;
+    position:absolute; top:200px; left:5%;
+    width:90%; height: 520px;
+    padding:10px;
     border-radius:20px;
 }
 .gran-modal .gran-modal-cont p {

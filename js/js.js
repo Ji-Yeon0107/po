@@ -91,25 +91,25 @@ $(function() {
     var banner = $(".content-list_m");
     var bannerLength = banner.find("img").length;
     var currentIndex = 0;
-
     $(".next").click(function(){ 
         currentIndex++; 
         if(currentIndex >= bannerLength){ currentIndex=0; }; 
         showImage(currentIndex); 
+        
     });
     $(".prev").click(function(){ 
         currentIndex--;
-        if(currentIndex < 0){ currentIndex=bannerLength -1; }; 
+        if(currentIndex < 1){ currentIndex=bannerLength -1; }; 
         showImage(currentIndex);
     });
     function showImage(index) {
-        $(".content-list_m>img").stop().fadeOut(1000);
-        $(".content-list_m>img").eq(index).stop().fadeIn(2000);
+        $(".content-list_m img").stop().fadeOut(1000);
+        $(".content-list_m img").eq(index).stop().fadeIn(2000);
     };
     var current = 0;
     var timeID;
     timer();
-    
+  
     $(".inner").on({
         mouseenter:function() {
             clearInterval(timeID);

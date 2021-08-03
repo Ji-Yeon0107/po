@@ -223,7 +223,7 @@ header .gnb_m .nav__depth1 .nav__depth2:nth-child(2) {
 }
 @media screen and (max-width:767px)  {
     header, footer { min-width:100%; }
-    header{ justify-content:start;}
+    header{ justify-content:start; position:fixed; }
     footer { display:none; }
     .footer_m { display:block; }
     header .gnb {
