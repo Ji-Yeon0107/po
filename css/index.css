@@ -387,7 +387,8 @@ body { background: #ffd000; }
     }
     .container .inner .next img,
     .container .inner .prev img,
-    .container .inner .content-list_m img:first-child {
+    .container .inner .content-list_m a:nth-child(1) img
+     {
         display:block;
     }
 }
@@ -416,7 +417,7 @@ body { background: #ffd000; }
     .container .inner .next img,
     .container .inner .prev img,
     .container .inner .content-list_m,
-    .container .inner .content-list_m img:nth-child(1)
+    .container .inner .content-list_m a:nth-child(1) img
      {
         display:block;
     }

@@ -449,7 +449,7 @@
     position:relative; z-index:3;
     cursor:pointer;
 }
-/* .container .inner .content .shelf .shelf-box .modal-btn:hover { /*호버*/
+/* .container .inner .content .shelf .shelf-box .modal-btn:hover { /*호버
     transform:scale(1.2) translatez(30px);
 } */
 .container .inner .content .shelf .shelf-box-txt {
