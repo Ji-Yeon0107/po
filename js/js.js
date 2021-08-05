@@ -39,9 +39,20 @@ $(function() {
     // 회사소개 회사연혁
     $('.timeline-point').on("click", function() {
         let j = $(this).index()-1;
+        $('.timeline-point').css("backgroundColor","#63371a");
         $('.history-title').hide();
         $('.history-detail>img').css('opacity','0');
         $('.history-detail>img').eq(j).animate({opacity:'1'}, 600);
+        $(this).css("backgroundColor","red");
+    });
+
+    $('.history-year li').on("click", function() { 
+        let i = $(this).index();
+        $('.timeline-point').css("backgroundColor","#63371a");
+        $('.history-title').hide();
+        $('.history-detail>img').css('opacity','0');
+        $('.history-detail>img').eq(i).animate({opacity:'1'}, 600);
+        $('.timeline-point').eq(i).css("backgroundColor","red");
     });
     
 // 태블릿, 모바일
