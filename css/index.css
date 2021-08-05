@@ -207,16 +207,16 @@ body { background: #ffd000; }
     height:250px;
 }
 .container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide{
-
+    background:rgba(255, 255, 255, 0.7); border-radius:5px; 
 }
 .container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide a img {
-    width:100%;
+    width:100%; max-width:249px;
 }
 .container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide p {
-    font-size:2vh;
+    font-size:1.5vh;
     background:rgba(255, 255, 255, 0.6);
     border-radius:50px;
-    width:80%; height:5vh; line-height:5vh;
+    width:80%; height:3.5vh; line-height:3.5vh;
     box-shadow:0 0 1px black;
     margin:0 auto; 
 }

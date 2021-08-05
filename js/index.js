@@ -11,6 +11,7 @@ var swiper = new Swiper('.swiper-container', {
 });
 var swiperBrand = new Swiper('.swiper-container2', {
     slidesPerView:2,
+    spaceBetween:10,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
