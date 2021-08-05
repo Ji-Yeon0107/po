@@ -27,7 +27,7 @@ header { border:0px solid black;
     min-width:1510px;
     height: 80px; 
     background-color: #ffd000;
-    position:relative; z-index:1000;
+    position:relative; z-index:999;
     display:flex; justify-content:center;
 }
 footer {
@@ -151,12 +151,15 @@ header .gnb-btn_m {
 header .gnb-btn-close_m {
     position:fixed; right:25px;
     color:white;
-    z-index:70;
+    z-index:90;
     display:none;
 }
 header .gnb-btn-bars_m {
-    z-index:1000;
+    z-index:9999;
     right:25px;
+}
+header .gnb-btn-bars_m i {
+    z-index:10000;
 }
 header .gnb_m {
     background:#63371a;

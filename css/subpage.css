@@ -128,10 +128,19 @@
     width:100%; height:30px;
     padding-top:0; padding-bottom:10px;
 }
+.container>.inner>.content>.product>.product-list>p:nth-child(3) {   
+    font-size:0.9rem; color:#aaa;
+}
+.container>.inner>.content>.product>.product-list>p>span {
+    color:black; font-weight:normal; text-align:center;
+    padding:3px;
+    background:#63371a; color:white;
+    border-radius:5px;
+}
 /* 모달창 안 */
 .container .inner .content .product-modal {
     background: rgba(0,0,0,0.5);
-    position:absolute; top:0; left:0;
+    position:absolute; top:0; left:0; z-index:99;
     width:100%; height:100%;
     cursor:pointer;
     display:none;
@@ -139,7 +148,7 @@
 .container .inner .content .product-modal .product-modal-cont{
     background:white; padding:10px;
     position:absolute; top:80px; left:25%;
-    z-index:500;
+    z-index:99;
     width:50%; height:700px;
     border-radius:20px;
     display:none;
@@ -155,7 +164,10 @@
 
 /*                         초코파이 하우스                      */
 /* 초코파이 하우스 - 제품소개 */
-.cont-choco { background:rgb(223, 207, 172);}
+.cont-choco { 
+    width:100%;
+    background:rgb(223, 207, 172);
+}
 .container .inner .content .cont-chocopie {
     width:100%; height:100%;
     margin-top:50px;
@@ -426,15 +438,15 @@
 .container .inner .content .shelf .shelf-box {
     margin:50px auto;
     width:100%;
-    display:grid;
+    display:grid; z-index:2;
     grid-template-columns:repeat(4, 1fr);
-    grid-auto-rows: 320px;
+    grid-auto-rows: 390px;
 } 
 .container .inner .content .shelf .shelf-box .modal-btn {
     width:240px;
     transition:all 0.6s;
     margin: 0 auto;
-    position:relative; z-index:2;
+    position:relative; z-index:3;
     cursor:pointer;
 }
 .container .inner .content .shelf .shelf-box .modal-btn:hover { /*호버*/
@@ -446,9 +458,8 @@
     text-align:center;
     display:grid;
     grid-template-columns: repeat(4, 1fr); 
-    grid-auto-rows: 49px;
-    row-gap:275px;
-    padding-top:240px;
+    grid-auto-rows: 390px;
+    padding-top:270px;
     cursor:pointer; 
 }
 .container .inner .content .shelf .shelf-box-txt li{
@@ -456,13 +467,22 @@
     width:100%;
     position:relative;
 }
-
+.container .inner .content .shelf .shelf-box-txt li p {   
+    font-size:0.9rem; color:#aaa;
+    padding:10px;
+}
+.container .inner .content .shelf .shelf-box-txt li p span {
+    color:black; font-weight:normal; text-align:center;
+    padding:3px;
+    background:#63371a; color:white;
+    border-radius:5px;
+}
 
 
 /* 그래놀라, 그래놀라 바 이미지 팝업 */
 .gran-modal { 
     display:none; 
-    position:absolute; left:0;top:0; z-index:2;
+    position:absolute; left:0;top:0; z-index:99;
     width:100%; height:100%;
     background:rgba(109, 108, 108, 0.7);
     cursor:pointer;   
@@ -471,7 +491,7 @@
     background:white; padding:10px;
     position:absolute; top:80px; left:25%;
     z-index:500;
-    width:50%; height:400px;
+    width:50%; height:500px;
     border-radius:20px;
     display:none;
 }

@@ -191,7 +191,6 @@ body { background: #ffd000; }
 .container .inner_m .banner-sns{
     height:500px;
 }
-
 .container .inner_m .banner_m .swiper-container .swiper-wrapper .swiper-slide img {
     width:100%;
     cursor:pointer;
@@ -205,15 +204,19 @@ body { background: #ffd000; }
 }
 .container .inner_m .banner_m .swiper-container2 {
     overflow:hidden;
+    height:250px;
+}
+.container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide{
+
 }
 .container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide a img {
     width:100%;
 }
 .container .inner_m .banner_m .swiper-container2 .swiper-wrapper .swiper-slide p {
-    font-size:1.5vh;
+    font-size:2vh;
     background:rgba(255, 255, 255, 0.6);
     border-radius:50px;
-    width:80%; height:3vh; line-height:3.5vh;
+    width:80%; height:5vh; line-height:5vh;
     box-shadow:0 0 1px black;
     margin:0 auto; 
 }
@@ -227,14 +230,14 @@ body { background: #ffd000; }
 .swiper-button-prev {
     background-image: url(../images/page_arrow_left.png);
     background-size:300%;
-    width:15px;height:15px;
-    position: relative; top:-60px;
+    width:20px;height:20px;
+    position: relative; top:-50%;
 }
 .swiper-button-next {
     background-image: url(../images/page_arrow_right.png);
     background-size:300%;
-    width:15px; height:15px;
-    position: relative; top:-60px; left:94%;
+    width:20px;height:20px;
+    position: relative; top:-50%; left:94%;
 }
 .container .inner_m .banner-sns .sns_m {
     width:70%; margin:0px auto;

@@ -102,10 +102,10 @@
     position:absolute; top:130px; left: 23%;
 }
 .container .inner .content .cont-chocopie .chocopie-detail {
-    height:650px;
+    height:550px;
 }
 .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail {
-    height:520px;
+    height:350px;
 }
 .container .inner .content .cont-chocopie .txt-hover {
     display:none;
