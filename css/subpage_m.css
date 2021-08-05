@@ -178,7 +178,7 @@
 /* 그래놀라, 그래놀라 바 이미지 팝업 */
 .gran-modal .gran-modal-cont {  
     position:absolute; top:200px; left:5%;
-    width:90%; height: 520px;
+    width:90%; height: 520px; z-index:99;
     border-radius:20px;
 }
 .gran-modal .gran-modal-cont p {
