@@ -10,7 +10,7 @@ var swiper = new Swiper('.swiper-container', {
         },
 });
 var swiperBrand = new Swiper('.swiper-container2', {
-    slidesPerView:3,
+    slidesPerView:2,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
