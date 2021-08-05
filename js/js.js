@@ -58,6 +58,7 @@ $(function() {
     $('.gnb_m').hide();
     $('.gnb-btn-close_m').hide();
     $('.gnb-btn-bars_m').on("click", function() {
+        console.log('dkanrjsk')
         $('.gnb_m').show();
         $('.gnb-btn-close_m').show();
         $('.gnb_m').stop().animate({opacity:"1", right:"0"}, 500);
@@ -67,8 +68,7 @@ $(function() {
         $(this).hide();
     });
     $('.gnb-btn-close_m').on("click", function() {
-        $('.gnb_m').css({opacity:"0", right:"-50%"});
-        $('.gnb_m').hide();
+        $('.gnb_m').stop().animate({opacity:"0", right:"-50%"}, 500);
         $(this).stop().animate({opacity:"0"}, 200);
         $('.gnb-btn-bars_m').show();
     }); 
