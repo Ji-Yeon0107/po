@@ -155,7 +155,7 @@ header .gnb-btn-close_m {
     display:none;
 }
 header .gnb-btn-bars_m {
-    z-index:80;
+    z-index:1000;
     right:25px;
 }
 header .gnb_m {
