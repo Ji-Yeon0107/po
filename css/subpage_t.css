@@ -87,30 +87,26 @@
 }
 .container .inner .content .history .history-year li {
     float:left; width:118px; height:100%;
-    text-indent:25px;
+    text-indent:5px;
+}
+.container .inner .content .history .history-year li:last-child {
+    width:57px; text-indent:0px;
 }
 .container .inner .content .history .history-year li:first-child {
-    text-indent:18px;
+    text-indent:10px;
 }
 .container .inner .content .history .history-cont .timeline {
-    top:82px; left:50px;
-    width:710px; height:1px;
-    border-bottom:1px solid red;
+    top:82px; left:40px;
+    width:700px; height:1px;
 }   
 /* 각 빨간동그라미 별 위치 */
-.container .inner .content .history .history-cont .timeline-point:nth-child(2) { left:30px; }
-.container .inner .content .history .history-cont .timeline-point:nth-child(3) { left:150px; }
-.container .inner .content .history .history-cont .timeline-point:nth-child(4) { left:270px; }
-.container .inner .content .history .history-cont .timeline-point:nth-child(5) { left:390px; }
-.container .inner .content .history .history-cont .timeline-point:nth-child(6) { left:510px; }
-.container .inner .content .history .history-cont .timeline-point:nth-child(7) { left:630px; }
-.container .inner .content .history .history-cont .timeline-point:nth-child(8) { left:750px; }
-
-
-
-
-
-
+.container .inner .content .history .history-cont .timeline-point:nth-child(2) { left:15px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(3) { left:135px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(4) { left:255px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(5) { left:375px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(6) { left:495px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(7) { left:615px; }
+.container .inner .content .history .history-cont .timeline-point:nth-child(8) { left:735px; }
 
 
 

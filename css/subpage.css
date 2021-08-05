@@ -109,7 +109,7 @@
 .container .inner .content .product .product-list:after {
     content:'자세히 보기'; display:block; 
     text-align:center;
-    position:relative; top:-250px;
+    position:relative; top:-280px;
     width:240px; height:215px;
     background:rgba(0, 0, 0, 0.5); color:#fff;
     font-weight:500; font-size:0.9rem;
@@ -590,11 +590,12 @@
 .container .inner .content .history .history-year {
     width: 100%; height:60px;
     position:absolute; top:245px; left:0px;
-    padding-left:20px;
+    padding-left:20px; z-index:15;
 }
 .container .inner .content .history .history-year li {
     float:left; width:140px; height:100%;
     text-indent:36px;
+    cursor:pointer;
 }
 .container .inner .content .history .history-year li:first-child {
     text-indent:42px;
@@ -603,7 +604,7 @@
 .container .inner .content .history .history-cont {
     width:100%; height:100%;
     border:0px solid green;
-    position:relative;
+    position:relative; z-index:14;
 }
 .container .inner .content .history .history-cont:after {
     content:''; display:block; clear:both;
@@ -611,30 +612,32 @@
 .container .inner .content .history .history-cont .timeline {
     position:absolute; top:82px; left:70px;
     width:840px; height:1px;
-    border-bottom:1px solid red;
+    border-bottom:1px solid #63371a;
 }   
 .container .inner .content .history .history-cont .timeline-point {
-    position:absolute; top:75px;
-    width:16px; height:16px;
-    background:red;
+    position:absolute; top:70px;
+    width:25px; height:25px;
+    background:#63371a;
     border-radius:50%;
     float:left; cursor:pointer;
     transition:all 0.8s; 
     transform-origin:center;
 }
-.container .inner .content .history .history-cont .timeline-point:after {
-    /*  clear:both; */
+.container .inner .content .history .history-cont .timeline-point:hover {
+    transform:scale(1.2); background-color:red;
+}
+/* .container .inner .content .history .history-cont .timeline-point:after {
     content:''; display:block;
     position:absolute; top:-9px;left:-9px;
     width:32px; height:32px;
     border-radius:50%; border:1px solid rgb(177, 3, 3);
     transition:all 0.6s;
-} 
+}  */
 /* 빨간동그라미 호버 */
-.container .inner .content .history .history-cont .timeline-point:hover:after {
+/* .container .inner .content .history .history-cont .timeline-point:hover:after {
     transform:scale(0.4);
     border:1px solid red;
-}
+} */
 /* 첫번째 빨간동그라미 속성, 호버 */
 .container .inner .content .history .history-cont .timeline-point:nth-child(2){ 
     top:66px; width:30px; height:30px; 

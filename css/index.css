@@ -230,13 +230,13 @@ body { background: #ffd000; }
 .swiper-button-prev {
     background-image: url(../images/page_arrow_left.png);
     background-size:300%;
-    width:20px;height:20px;
+    width:25px;height:25px;
     position: relative; top:-50%;
 }
 .swiper-button-next {
     background-image: url(../images/page_arrow_right.png);
     background-size:300%;
-    width:20px;height:20px;
+    width:25px;height:25px;
     position: relative; top:-50%; left:94%;
 }
 .container .inner_m .banner-sns .sns_m {
