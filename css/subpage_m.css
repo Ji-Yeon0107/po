@@ -88,8 +88,8 @@
 }
 
 .modal-box .product-modal-cont{
-    left:15%;
-    width:70%;
+    left:5%;
+    width:90%;
 }
 /* 마켓오 네이쳐 그래놀라 */
 .container .inner .content .shelf .shelf-box {
@@ -103,8 +103,8 @@
 
 /* 그래놀라, 그래놀라 바 이미지 팝업 */
 .modal-box .gran-modal-cont {  
-    left:15%;
-    width:70%;
+    left:5%;
+    width:90%;
 }
 .modal-box .gran-modal-cont p {
     text-indent:25px; padding-right:25px;
