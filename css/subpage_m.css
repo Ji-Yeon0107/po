@@ -111,6 +111,7 @@
 .modal-box .gran-modal-cont {  
     left:5%;
     width:90%;
+    padding:10px;
 }
 .modal-box .gran-modal-cont p {
     text-indent:25px; padding-right:25px;
