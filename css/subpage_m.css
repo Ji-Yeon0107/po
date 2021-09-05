@@ -74,9 +74,7 @@
     border:2px solid red;
 }
 
-.container .inner .content_m .main2_m {
-  
-}
+
 /* 신제품 */
 .container .inner .content .product { 
     grid-template-columns:repeat(2, 1fr); justify-content:center;
@@ -88,12 +86,11 @@
 .container .inner .content .product .product-list:after {
     display:none;
 }
-.container .inner .content .product-modal .product-modal-cont{
-    position:absolute; top:200px; left:5%;
-    width:90%; height: 520px;
-    border-radius:20px;
-}
 
+.modal-box .product-modal-cont{
+    left:15%;
+    width:70%;
+}
 /* 마켓오 네이쳐 그래놀라 */
 .container .inner .content .shelf .shelf-box {
     grid-template-columns:repeat(2, 1fr);
@@ -102,21 +99,25 @@
     height:195px; width:90%;
     margin:0;
 }
-.container .inner .content .product-modal .product-modal-cont{
-    width:90%; height:600px;
-}
+
 
 /* 그래놀라, 그래놀라 바 이미지 팝업 */
-.gran-modal .gran-modal-cont {  
-    position:absolute; top:200px; left:5%;
-    width:90%; height: 520px; z-index:99;
-    border-radius:20px;
+.modal-box .gran-modal-cont {  
+    left:15%;
+    width:70%;
 }
-.gran-modal .gran-modal-cont p {
+.modal-box .gran-modal-cont p {
     text-indent:25px; padding-right:25px;
 }
 
 /* 초코파이 하우스 */
+
+.container .inner .content .cont-chocopie .pc2 {
+    display:none;
+}
+.container .inner .content .cont-chocopie .mobile{
+    display:block;
+}
 .container .inner .content .cont-chocopie .chocopie-flavor ul .flavor-img:nth-child(odd) { margin-right:0px; }
 
 .container .inner .content .cont-chocopie .chocopie-detail img {
@@ -187,8 +188,10 @@
     width:100%;
     padding:10px;
 }
-.container .inner .content .cont-customer div input[name="writer"]{
-    width:140px;
+.container .inner .content .cont-customer div input[name="writer"],
+.container .inner .content .cont-customer div input[name="password"],
+.container .inner .content .cont-customer div input[name="email"]{
+    width:40%;
 }
 .container .inner .content .cont-customer div input[name="title"]{
     width:90%;
@@ -206,7 +209,6 @@
 .container .inner .content .cont-customer button {
     width:100px; height:40px;
     margin:30px auto;
-    border:none;
     cursor:pointer;
 }
 /*                    회사소개                  */

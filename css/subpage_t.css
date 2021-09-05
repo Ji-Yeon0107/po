@@ -51,11 +51,19 @@
 .container .inner .content .product { 
     grid:repeat(3, 1fr) / auto-flow;
 }
+.modal-box .product-modal-cont{
+    padding:30px;
+    width:50%; left:25%;
+}
 /* 초코파이 하우스 */
 .container .inner .content .cont-chocopie .chocopie-detail img {
     width:auto;
     position:absolute; top:195px; left: 180px;
 }
+.container .inner .content .cont-chocopie .mobile{
+    display:none;
+}
+
 .container .inner .content .cont-chocopie .chocopie-detail .chocopie-img-detail {
     margin-left:-120px;
 }
@@ -73,13 +81,7 @@
     grid-template-columns: repeat(3, 1fr); 
 }
 
-/* 그래놀라, 그래놀라 바 이미지 팝업 */
 
-.gran-modal .gran-modal-cont {  
-    position:absolute; top:200px; left:15%;
-    width:60%; z-index:99;
-    border-radius:20px;
-}
 /* 회사소개 */
 .container .inner .content .history .history-year {
     position:absolute; top:170px; left:0px;
