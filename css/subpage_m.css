@@ -86,10 +86,16 @@
 .container .inner .content .product .product-list:after {
     display:none;
 }
-
 .modal-box .product-modal-cont{
     left:5%;
     width:90%;
+}
+.modal-box .product-modal-cont{
+    padding:10px;
+    padding-bottom:40px;
+}
+.modal-box .close{
+    left:85%;
 }
 /* 마켓오 네이쳐 그래놀라 */
 .container .inner .content .shelf .shelf-box {

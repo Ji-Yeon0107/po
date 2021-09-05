@@ -55,6 +55,14 @@
     padding:30px;
     width:50%; left:25%;
 }
+.modal-box .close{
+    left:70%;
+}
+/* 그래놀라 */
+.modal-box .gran-modal-cont {  
+    padding:30px;
+    width:50%; left:25%;
+}
 /* 초코파이 하우스 */
 .container .inner .content .cont-chocopie .chocopie-detail img {
     width:auto;
