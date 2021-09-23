@@ -1,7 +1,7 @@
 /* font-family: 'Noto Sans KR', sans-serif;
 Main1(레드): #c60000
 Main2(브라운):#63371a  rgba(99, 55, 26)
-Main3(노랑): #ffd000
+Main3(노랑): #f7c746
 폰트색: #310f00, #fff
 전체배경색:rgb(255, 253, 248);
 배경색(라이트 브라운): #8b6044
@@ -9,7 +9,6 @@ Main3(노랑): #ffd000
 진한구분선:rgba(99, 55, 26, 0.2);
 로고: 정사각형로고-(0,0) 246*246
 메뉴버튼색깔: #e7451c;
-초코파이색: #63371a;
 */
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -27,7 +26,7 @@ header { border:0px solid black;
     width:100%; 
     min-width:1510px;
     height: 80px; 
-    background-color: #ffd000;
+    background-color: #f7c746;
     position:relative; z-index:999;
     display:flex; justify-content:center;
 }
@@ -90,8 +89,6 @@ header .gnb .gnb-list .table-wrap .table .lnb-img {
     position:relative;
 }
 
-header .gnb .gnb-list .table-wrap .table .lnb-wrap .lnb{
-}
 header>.gnb>.gnb-list>.table-wrap>.table>.lnb-wrap>.lnb>li {
     font-weight:normal; text-indent:20px; line-height:2;
     cursor:pointer;
@@ -109,7 +106,7 @@ header>.gnb>.gnb-list:hover {
 }
 header .gnb .gnb-list:hover .table-wrap { 
     height:160px; 
-    background:#63371a;
+    _background:#63371a;
     color:black;
 }
 header .gnb .gnb-list:hover .table-wrap .table {
@@ -124,11 +121,12 @@ header .gnb .gnb-list .table-wrap .table .lnb-wrap .lnb li:hover {
 /* logo */
 header .logo {
     margin:0;padding:0; opacity:0.8;
-    width:120px; height:92px;
-    position:absolute; top:16px ; left:27%;
+    width:180px; height:45px;
+    position:absolute; top:2px ; left:16%;
     z-index:10;
-    background:url(../images/logo1.png)no-repeat;
-    background-size:60% 60%;
+    background:url(../images/logo.png)no-repeat;
+    background-position: -44px -4px;
+    background-size:contain;
 }
 header .logo_m {
     margin:0;padding:0; opacity:0.8;
@@ -201,11 +199,8 @@ header .gnb_m .nav__depth1 .nav__depth2:nth-child(2) {
 }
 
 /* 로고 미디어 쿼리 */
-@media screen and (max-width:2200px) and (min-width:1951px) {
-    header .logo { left:22%; }
-}
 @media screen and (max-width:1950px) {
-    header .logo { left:17%; }
+    header .logo { left:12%; }
 }
 @media screen and (max-width:1680px) and (min-width:768px) {
     header .logo { display:none; }

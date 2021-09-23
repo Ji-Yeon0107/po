@@ -1,5 +1,25 @@
 window.onload = function() { 
-$(function() {
+    function pauseButton() {
+        $('.swiper-button-prev-pc').css({'animationPlayState':'paused'})
+        $('.swiper-button-next-pc').css({'animationPlayState':'paused'})
+    }
+    function runButton(){
+        $('.swiper-button-prev-pc').css({'animationPlayState':'running'})
+        $('.swiper-button-next-pc').css({'animationPlayState':'running'})
+    }
+$(function() {   
+    $('.swiper-button-prev-pc').mouseenter(function(){
+        pauseButton()
+    })
+    $('.swiper-button-next-pc').mouseenter(function(){
+        pauseButton()
+    })
+    $('.swiper-button-prev-pc').mouseleave(function() {
+        runButton()
+    })
+    $('.swiper-button-next-pc').mouseleave(function(){
+        runButton()
+    })
     //(PC) snb
 
     $('.snb-list').mouseenter(function() {
@@ -146,4 +166,28 @@ $(function() {
         }
     })
 });
+
+
+
+
+    //counter-up
+        const counterUp = window.counterUp.default
+
+        const callback = entries => {
+            entries.forEach( entry => {
+                const el = entry.target
+                if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+                    counterUp( el, {
+                        duration: 2000,
+                        delay: 16,
+                    } )
+                    el.classList.add( 'is-visible' )
+                }
+            } )
+        }
+        
+        const IO = new IntersectionObserver( callback, { threshold: 1 } )
+        
+        const el = document.querySelector( '.counter' )
+        IO.observe( el )
 }
