@@ -89,8 +89,6 @@
 .modal-box .product-modal-cont{
     left:5%;
     width:90%;
-}
-.modal-box .product-modal-cont{
     padding:10px;
     padding-bottom:40px;
 }
@@ -189,7 +187,7 @@
 
 
 
-
+/* 고객센터 */
 /*                    고객의견                   */
 .container .inner .content .cont-customer {
     width:100%;
@@ -218,6 +216,32 @@
     margin:30px auto;
     cursor:pointer;
 }
+
+/* 고객 이벤트 */
+.container .inner .cont-event li {
+    width:90%; height: 370px;
+    display: block;
+    grid-template-columns: repeat(1, 1fr 1fr);
+    column-gap: 1px;
+    margin-bottom:10px;
+}
+.container .inner .cont-event li div:nth-child(1) {
+    height:220px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.container .inner .cont-event li div:nth-child(2) {
+    height:150px;
+    border:1px dotted #cecece;
+    padding-left:10%;
+    padding-right:10%;
+}
+.container .inner .cont-event li div:nth-child(2) p {
+    display:none;
+}
+
+
 /*                    회사소개                  */
 /* 연혁 */
 .container .inner .content .pc,

@@ -22,11 +22,11 @@ a { text-decoration:none; color:inherit; display:block;}
 
 
 /* header, footer */
-header { border:0px solid black;
+header {
     width:100%; 
     min-width:1510px;
     height: 80px; 
-    background-color: #f7c746;
+    background: #f7c746;
     position:relative; z-index:999;
     display:flex; justify-content:center;
 }
@@ -37,7 +37,7 @@ footer {
     height:140px; line-height:2;
     padding-top:30px; padding-left:50px;
     font-size:0.8rem;
-    background:#3a200f;; color:#fff;
+    background:#3a200f; color:#fff;
 }
 footer p {
     padding:0;

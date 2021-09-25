@@ -160,9 +160,10 @@
 }
 .modal-box .product-modal-cont{
     background:white; padding:70px;
-    position:absolute; top:200px; left:30%;
+    position:fixed; top:12%; left:30%;
     z-index:99;
-    width:40%; 
+    width:40%; height:80%;
+    overflow:auto;
     display:none;
 }
 .modal-box .product-modal-cont img {
@@ -538,7 +539,7 @@
 /*                           고객센터                         */
 /* 고객센터 - 고객의견접수 */
 .container .inner .content .cont-customer {
- padding:30px;
+    padding:30px;
 }
 .container .inner .content .cont-customer div {
     margin-top:3px;
@@ -588,6 +589,53 @@
     background:coral; color:white;
 }
 
+/* 이벤트 */
+.container .inner .cont-event {
+    width:100%;
+    padding-left:40px;
+    margin-top:80px;
+}
+.container .inner .cont-event li {
+    width:90%; height: 250px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 2fr);
+    column-gap: 40px;
+    margin-bottom:30px;
+}
+.container .inner .cont-event li div {
+    height:100%;
+}
+
+.container .inner .cont-event li div:nth-child(2) {
+    border:1px dotted #cecece;
+    padding: 50px 90px;
+}
+.container .inner .cont-event li div:nth-child(2) strong {
+    font-size:24px;
+}
+.container .inner .cont-event li div:nth-child(2) p {
+    padding-left:0;
+}
+.container .inner .cont-event li:nth-child(1) div:nth-child(1) {
+    background:url(../images/event1.jpg) no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+.container .inner .cont-event li:nth-child(2) div:nth-child(1) {
+    background:url(../images/event2.jpg) no-repeat;
+    background-size:contain;
+   background-position:center;
+}
+.container .inner .cont-event li:nth-child(3) div:nth-child(1) {
+    background:url(../images/event3.jpg) no-repeat;
+    background-size:contain;
+   background-position:center;
+}
+.container .inner .cont-event li:nth-child(4) div:nth-child(1) {
+    background:url(../images/event4.jpg) no-repeat;
+    background-size:contain;
+   background-position:center;
+}
 /*                           회사소개                              */
 /* 회사소개 - 회사연혁 */
 .container .inner .content .history_m {
