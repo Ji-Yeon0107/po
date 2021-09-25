@@ -1,80 +1,7 @@
-window.onload = function() { 
-    function pauseButton() {
-        $('.swiper-button-prev-pc').css({'animationPlayState':'paused'})
-        $('.swiper-button-next-pc').css({'animationPlayState':'paused'})
-    }
-    function runButton(){
-        $('.swiper-button-prev-pc').css({'animationPlayState':'running'})
-        $('.swiper-button-next-pc').css({'animationPlayState':'running'})
-    }
-$(function() {   
-    $('.swiper-button-prev-pc').mouseenter(function(){
-        pauseButton()
-    })
-    $('.swiper-button-next-pc').mouseenter(function(){
-        pauseButton()
-    })
-    $('.swiper-button-prev-pc').mouseleave(function() {
-        runButton()
-    })
-    $('.swiper-button-next-pc').mouseleave(function(){
-        runButton()
-    })
-    //(PC) snb
+window.onload = function() {
 
-    $('.snb-list').mouseenter(function() {
-        var i = $(this).index()-1;
-        var listHeight = 40 *($(this).children().length+1);
-        $(this).eq(i).css("height", listHeight);
-    });
+$(function() {
 
-    $('.snb-list').mouseleave(function() {
-        var i = $(this).index()-1;
-        $(this).eq(i).css("height", "40");
-    })
-    
-        var removeEvent = $(function() {     
-        if (matchMedia("screen and (max-width:1200px)").matches) {
-            $('.snb-list').off("mouseenter");
-            $('.snb-list').off("mouseleave");
-        }
-    });
-    // 모달창
-    $('.modal-btn').on("click", function() {
-        var i = $(this).index();
-        $('.modal').fadeIn();
-        $('.modal-cont').hide();
-        $('.modal-cont').eq(i).fadeIn();
-    });
-    $('.shelf-box-txt>li').on("click", function() {
-        var i = $(this).index();
-        $('.modal').fadeIn();
-        $('.modal-cont').hide();
-        $('.modal-cont').eq(i).fadeIn();
-    });
-    $('.modal').click(function(){
-        $('.modal').fadeOut();
-    });
-
-    // 회사소개 회사연혁
-    $('.timeline-point').on("click", function() {
-        let j = $(this).index()-1;
-        $('.timeline-point').css("backgroundColor","#63371a");
-        $('.history-title').hide();
-        $('.history-detail>img').css('opacity','0');
-        $('.history-detail>img').eq(j).animate({opacity:'1'}, 600);
-        $(this).css("backgroundColor","red");
-    });
-
-    $('.history-year li').on("click", function() { 
-        let i = $(this).index();
-        $('.timeline-point').css("backgroundColor","#63371a");
-        $('.history-title').hide();
-        $('.history-detail>img').css('opacity','0');
-        $('.history-detail>img').eq(i).animate({opacity:'1'}, 600);
-        $('.timeline-point').eq(i).css("backgroundColor","red");
-    });
-    
 // 태블릿, 모바일
 
     // (모바일) 서브페이지에서 메뉴클릭 
@@ -88,19 +15,18 @@ $(function() {
     // 네비바 등장
     $('.gnb_m').hide();
     $('.gnb-btn-close_m').hide();
-    $('.gnb-btn-bars_m').on("click", function() {
-        console.log('dkanrjsk')
+    $('.gnb-btn-bars_m').on('click', function() {
         $('.gnb_m').show();
         $('.gnb-btn-close_m').show();
-        $('.gnb_m').stop().animate({opacity:"1", right:"0"}, 500);
-        $('.gnb-btn-close_m').stop().animate({opacity:"1"}, 500);
+        $('.gnb_m').stop().animate({opacity:'1', right:'0'}, 500);
+        $('.gnb-btn-close_m').stop().animate({opacity:'1'}, 500);
 
         $('.nav__depth2').css("display","none");
         $(this).hide();
     });
-    $('.gnb-btn-close_m').on("click", function() {
-        $('.gnb_m').stop().animate({opacity:"0", right:"-50%"}, 500);
-        $(this).stop().animate({opacity:"0"}, 200);
+    $('.gnb-btn-close_m').on('click', function() {
+        $('.gnb_m').stop().animate({opacity:'0', right:'-50%'}, 500);
+        $(this).stop().animate({opacity:'0'}, 200);
         $('.gnb-btn-bars_m').show();
     }); 
     // 메뉴펼치기
@@ -155,6 +81,81 @@ $(function() {
         }, 3000);
     };
 
+//PC
+
+    // swiper 이동 화살표 버튼
+    $('.swiper-button-prev-pc').mouseenter(function(){
+        pauseButton()
+    })
+    $('.swiper-button-next-pc').mouseenter(function(){
+        pauseButton()
+    })
+    $('.swiper-button-prev-pc').mouseleave(function() {
+        runButton()
+    })
+    $('.swiper-button-next-pc').mouseleave(function(){
+        runButton()
+    })
+
+    //snb
+    $('.snb-list').mouseenter(function() {
+        var i = $(this).index()-1;
+        var listHeight = 40 *($(this).children().length+1);
+        $(this).eq(i).css("height", listHeight);
+    });
+
+    $('.snb-list').mouseleave(function() {
+        var i = $(this).index()-1;
+        $(this).eq(i).css("height", "40");
+    })
+    
+        var removeEvent = $(function() {     
+        if (matchMedia("screen and (max-width:1200px)").matches) {
+            $('.snb-list').off("mouseenter");
+            $('.snb-list').off("mouseleave");
+        }
+    });
+
+    // 모달
+    $('.modal-btn').on("click", function() {
+        var i = $(this).index();
+        $('.modal').fadeIn();
+        $('.modal-cont').hide();
+        $('.modal-cont').eq(i).fadeIn();
+        $('body').css('overflow','hidden');
+    });
+    $('.shelf-box-txt>li').on("click", function() {
+        var i = $(this).index();
+        $('.modal').fadeIn();
+        $('.modal-cont').hide();
+        $('.modal-cont').eq(i).fadeIn();
+        $('body').css('overflow','hidden');
+
+    });
+    $('.modal').click(function(){
+        $('.modal').fadeOut();
+        $('body').css('overflow','visible');
+    });
+
+    // 회사소개 회사연혁
+    $('.timeline-point').on("click", function() {
+        let j = $(this).index()-1;
+        $('.timeline-point').css("backgroundColor","#63371a");
+        $('.history-title').hide();
+        $('.history-detail>img').css('opacity','0');
+        $('.history-detail>img').eq(j).animate({opacity:'1'}, 600);
+        $(this).css("backgroundColor","red");
+    });
+
+    $('.history-year li').on("click", function() { 
+        let i = $(this).index();
+        $('.timeline-point').css("backgroundColor","#63371a");
+        $('.history-title').hide();
+        $('.history-detail>img').css('opacity','0');
+        $('.history-detail>img').eq(i).animate({opacity:'1'}, 600);
+        $('.timeline-point').eq(i).css("backgroundColor","red");
+    });
+    
     // 서브페이지 - 초코파이 하우스 - 제품 소개
     $('.img-pointer').on("click", function() {
         if ($(this).children('.detail-all').css("opacity")=="0") {
@@ -167,27 +168,13 @@ $(function() {
     })
 });
 
+function pauseButton() {
+    $('.swiper-button-prev-pc').css({'animationPlayState':'paused'})
+    $('.swiper-button-next-pc').css({'animationPlayState':'paused'})
+}
+function runButton(){
+    $('.swiper-button-prev-pc').css({'animationPlayState':'running'})
+    $('.swiper-button-next-pc').css({'animationPlayState':'running'})
+}
 
-
-
-    //counter-up
-        const counterUp = window.counterUp.default
-
-        const callback = entries => {
-            entries.forEach( entry => {
-                const el = entry.target
-                if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
-                    counterUp( el, {
-                        duration: 2000,
-                        delay: 16,
-                    } )
-                    el.classList.add( 'is-visible' )
-                }
-            } )
-        }
-        
-        const IO = new IntersectionObserver( callback, { threshold: 1 } )
-        
-        const el = document.querySelector( '.counter' )
-        IO.observe( el )
 }
